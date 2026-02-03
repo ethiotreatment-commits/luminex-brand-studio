@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Palette, Megaphone, Video, PenTool, Lightbulb, Globe, Check } from "lucide-react";
+import { ArrowRight, Palette, Megaphone, Video, PenTool, Globe, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ const services = [
   {
     icon: PenTool,
     title: "Graphic Design & Branding",
-    description: "Create a memorable visual identity that tells your brand story. We specialize in clever logos with hidden meanings, complete brand systems, and visual assets that leave lasting impressions.",
+    description: "Create a memorable visual identity that tells your brand story. We specialize in clever logos with hidden meanings — the kind people notice and never forget. From complete brand systems to marketing collateral, we obsess over every detail so you don't have to.",
     features: [
       "Logo design with hidden symbolism",
       "Brand guidelines & identity systems",
@@ -18,78 +18,53 @@ const services = [
       "Marketing collateral",
       "Illustration & iconography",
     ],
-    packages: [
-      { name: "Starter", price: "$500", desc: "Logo + basic guidelines" },
-      { name: "Professional", price: "$1,500", desc: "Full brand identity" },
-      { name: "Enterprise", price: "Custom", desc: "Complete rebrand" },
-    ],
   },
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    description: "Amplify your reach and convert audiences with data-driven marketing strategies. From SEO to social media, we create campaigns that deliver measurable results.",
+    description: "We don't just run ads — we build strategies that actually move the needle. Our team understands both the numbers and the people behind them. Whether it's SEO, social media, or paid campaigns, we create marketing that gets real results.",
     features: [
       "Search Engine Optimization (SEO)",
-      "Social media management",
-      "Paid advertising (Google, Meta)",
+      "Social media management & strategy",
+      "Paid advertising (Google, Meta, TikTok)",
       "Email marketing campaigns",
-      "Analytics & reporting",
-    ],
-    packages: [
-      { name: "Starter", price: "$300/mo", desc: "Basic social management" },
-      { name: "Professional", price: "$800/mo", desc: "Multi-channel strategy" },
-      { name: "Enterprise", price: "Custom", desc: "Full marketing team" },
+      "Analytics & performance reporting",
     ],
   },
   {
     icon: Video,
     title: "Video Production & Editing",
-    description: "Bring your stories to life with cinematic video content. From concept to final cut, we produce compelling videos that captivate and convert.",
+    description: "From raw footage to cinematic final cuts, we produce videos that stop the scroll. Our editors and producers know how to tell stories that captivate, whether it's a 15-second social clip or a full corporate documentary.",
     features: [
       "Commercial & promotional videos",
       "Corporate documentaries",
-      "Social media content",
+      "Social media content (Reels, TikToks, Stories)",
       "Motion graphics & animation",
-      "Post-production & editing",
-    ],
-    packages: [
-      { name: "Starter", price: "$800", desc: "Social video package" },
-      { name: "Professional", price: "$3,000", desc: "Commercial production" },
-      { name: "Enterprise", price: "Custom", desc: "Full film production" },
+      "Post-production & color grading",
     ],
   },
   {
-    icon: Lightbulb,
+    icon: Palette,
     title: "Content Creation",
-    description: "Engage your audience with compelling content across all platforms. Our team creates everything from blog posts to social media content that resonates.",
+    description: "Great content isn't just pretty — it speaks to your audience. Our team creates everything from photography and copywriting to social posts that actually get engagement. We know what works because we're always learning, testing, and refining.",
     features: [
-      "Blog & article writing",
-      "Social media content",
+      "Professional photography & shoots",
       "Copywriting & messaging",
-      "Photography & shoots",
-      "Content strategy",
-    ],
-    packages: [
-      { name: "Starter", price: "$400/mo", desc: "8 posts/month" },
-      { name: "Professional", price: "$900/mo", desc: "20 posts + blog" },
-      { name: "Enterprise", price: "Custom", desc: "Full content team" },
+      "Social media content calendars",
+      "Blog & article writing",
+      "Content strategy & planning",
     ],
   },
   {
     icon: Globe,
-    title: "Web & App Development",
-    description: "Build fast, beautiful, and functional digital experiences. We create responsive websites and applications that deliver exceptional user experiences.",
+    title: "Web Development",
+    description: "We build websites and apps that are fast, beautiful, and actually work. No bloated code, no frustrating user experiences. Just clean, responsive digital products that make your brand look as good online as it deserves.",
     features: [
       "Custom website development",
       "E-commerce solutions",
       "Web applications",
       "Mobile-responsive design",
-      "Maintenance & support",
-    ],
-    packages: [
-      { name: "Starter", price: "$1,500", desc: "5-page website" },
-      { name: "Professional", price: "$4,000", desc: "Custom web app" },
-      { name: "Enterprise", price: "Custom", desc: "Full platform build" },
+      "Maintenance & ongoing support",
     ],
   },
 ];
@@ -113,7 +88,7 @@ const Services = () => {
               What We Offer
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
-              Comprehensive creative solutions tailored to light up your brand and drive real results.
+              Everything you need to make your brand shine, done right.
             </p>
           </div>
         </div>
@@ -122,14 +97,15 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="space-y-24">
+          <div className="space-y-20">
             {services.map((service, index) => (
               <div
                 key={service.title}
                 className={cn(
-                  "grid lg:grid-cols-2 gap-12 items-start",
+                  "grid lg:grid-cols-2 gap-12 items-start opacity-0 animate-fade-in",
                   index % 2 === 1 && "lg:flex-row-reverse"
                 )}
+                style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
               >
                 {/* Content */}
                 <div className={cn(index % 2 === 1 && "lg:order-2")}>
@@ -142,43 +118,34 @@ const Services = () => {
                     </h2>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
                     {service.description}
                   </p>
 
-                  <ul className="space-y-3 mb-8">
+                  <Button variant="hero" size="lg" asChild>
+                    <Link to="/contact">
+                      Get a Quote
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
+
+                {/* Features Card */}
+                <div className={cn(
+                  "bg-card border border-border rounded-2xl p-8 card-glow",
+                  index % 2 === 1 && "lg:order-1"
+                )}>
+                  <h3 className="font-bold text-foreground mb-6">What's included:</h3>
+                  <ul className="space-y-4">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3 h-3 text-primary" />
+                        <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3.5 h-3.5 text-primary" />
                         </div>
-                        <span className="text-foreground">{feature}</span>
+                        <span className="text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Pricing Cards */}
-                <div className={cn("grid gap-4", index % 2 === 1 && "lg:order-1")}>
-                  {service.packages.map((pkg, pkgIndex) => (
-                    <div
-                      key={pkg.name}
-                      className={cn(
-                        "bg-card border rounded-xl p-6 transition-all duration-300 hover:border-primary/50",
-                        pkgIndex === 1 ? "border-primary glow-border" : "border-border"
-                      )}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="font-bold text-foreground">{pkg.name}</h3>
-                          <p className="text-sm text-muted-foreground">{pkg.desc}</p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-2xl font-bold text-primary">{pkg.price}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             ))}
@@ -191,14 +158,14 @@ const Services = () => {
         <div className="absolute inset-0 gradient-spotlight opacity-50" />
         <div className="container mx-auto px-6 relative text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Need a Custom Solution?
+            Need Something Custom?
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Every brand is unique. Let's discuss your specific needs and create a tailored package just for you.
+            Every brand is unique. Let's talk about what you need and build a package that fits.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact">
-              Get a Custom Quote
+              Get in Touch
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>

@@ -1,32 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Heart, Sparkles, Globe } from "lucide-react";
+import { ArrowRight, Target, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SectionHeading from "@/components/SectionHeading";
-
-const values = [
-  {
-    icon: Sparkles,
-    title: "Creativity Without Limits",
-    description: "We push boundaries and challenge conventions to create work that truly stands out.",
-  },
-  {
-    icon: Target,
-    title: "Strategic Thinking",
-    description: "Every creative decision is backed by strategy that drives real business results.",
-  },
-  {
-    icon: Heart,
-    title: "Passion for Excellence",
-    description: "We pour our hearts into every project, treating your brand as if it were our own.",
-  },
-  {
-    icon: Globe,
-    title: "Global Perspective",
-    description: "Ethiopia-based with a worldview, we blend local insights with international standards.",
-  },
-];
 
 const About = () => {
   return (
@@ -44,112 +20,80 @@ const About = () => {
               About Us
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 opacity-0 animate-fade-in" style={{ animationDelay: "100ms", animationFillMode: "forwards" }}>
-              Who We Are
+              Hey, we're Luminex.
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
-              A dynamic creative agency in Addis Ababa, Ethiopia, bringing together top talent in design, marketing, video, and development to help brands shine globally.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Main About Section */}
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <SectionHeading
-                subtitle="Our Story"
-                title="Born to Light Up Brands"
-                align="left"
-                className="mb-8"
-              />
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  Luminex was founded with a singular vision: to be the beacon that illuminates brands in an increasingly crowded marketplace. Based in the heart of Addis Ababa, we've grown from a small creative studio into a full-service agency serving clients across Africa and beyond.
-                </p>
-                <p>
-                  We believe that great design is more than aesthetics—it's about crafting meaningful connections between brands and their audiences. Every logo we design carries hidden meanings, every campaign we launch tells a compelling story, and every website we build delivers exceptional experiences.
-                </p>
-                <p>
-                  Our approach combines Ethiopian creativity with global standards, delivering work that resonates locally while standing tall on the international stage. We take on contractual projects with passion and precision, treating every client's vision as our own.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We started because we love what happens when good ideas meet real talent. We're a tight group in Addis who eat, sleep, and breathe creative work — graphic designers who obsess over every detail, digital marketers who understand numbers <em>and</em> people, video editors who turn raw footage into something cinematic, content creators who know how to speak to an audience, creative directors who keep the vision clear, and developers who make sure everything runs smoothly.
+              </p>
 
-            <div className="order-1 lg:order-2 relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent overflow-hidden relative">
-                <div className="absolute inset-0 light-ray opacity-50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center animate-glow-pulse">
-                      <Sparkles className="w-16 h-16 text-primary" />
-                    </div>
-                    <p className="text-2xl font-bold text-foreground">Creative Excellence</p>
-                    <p className="text-muted-foreground mt-2">Since Day One</p>
-                  </div>
-                </div>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We're based in Addis Ababa, but we've already worked with clients from different corners of the world. We take on projects big and small, local or international, as long as there's a chance to do something meaningful.
+              </p>
+
+              <div className="bg-card border border-border rounded-2xl p-8 my-12">
+                <h3 className="text-xl font-bold text-foreground mb-6">What we care about most:</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Making work that feels fresh and clever (especially logos that have a little secret inside them)",
+                    "Delivering on time without cutting corners",
+                    "Actually listening to what the client needs",
+                    "Building long-term trust, not just one-off jobs",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We're not the biggest agency out there, and we don't pretend to be. But we're damn good at what we do, and we pour everything into every project because we know how much your brand matters to you.
+              </p>
+
+              <p className="text-xl text-foreground leading-relaxed font-medium">
+                If you're looking for a team that treats your vision like it's their own, let's talk.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Mission & Vision Section */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="container mx-auto px-6 relative">
-          <SectionHeading
-            subtitle="Our Team"
-            title="The Creative Minds"
-            description="Our strength lies in our diverse, multidisciplinary team united by a passion for exceptional creative work."
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { title: "Graphic Designers", desc: "Visual storytellers who transform ideas into stunning designs" },
-              { title: "Digital Marketers", desc: "Strategy experts driving growth through data-driven campaigns" },
-              { title: "Video Editors & Producers", desc: "Cinematic craftspeople bringing stories to life" },
-              { title: "Content Creators", desc: "Wordsmiths and creators who engage and inspire" },
-              { title: "Creative Directors", desc: "Visionaries who guide projects from concept to completion" },
-              { title: "Developers", desc: "Technical experts building seamless digital experiences" },
-            ].map((item, index) => (
-              <div
-                key={item.title}
-                className="bg-card border border-border rounded-xl p-8 card-glow opacity-0 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
-              >
-                <h3 className="text-lg font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Mission */}
+            <div className="bg-card border border-border rounded-2xl p-8 card-glow opacity-0 animate-fade-in" style={{ animationFillMode: "forwards" }}>
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-primary" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We exist to help brands shine brighter — through logos people remember forever, campaigns that actually move the needle, videos that stop the scroll. We listen hard, think creatively, and deliver work we're proud to put our name on. Simple as that.
+              </p>
+            </div>
 
-      {/* Values Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <SectionHeading
-            subtitle="Our Values"
-            title="What Drives Us"
-            description="The principles that guide every project and every relationship we build."
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="text-center opacity-0 animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms`, animationFillMode: "forwards" }}
-              >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">{value.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+            {/* Vision */}
+            <div className="bg-card border border-border rounded-2xl p-8 card-glow opacity-0 animate-fade-in" style={{ animationDelay: "100ms", animationFillMode: "forwards" }}>
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Eye className="w-7 h-7 text-primary" />
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To become the go-to creative partner in Ethiopia and across borders — where ambitious brands come when they want fresh ideas, reliable execution, and results that make them feel unstoppable.
+              </p>
+            </div>
           </div>
         </div>
       </section>

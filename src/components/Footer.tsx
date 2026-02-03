@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Logo showTagline size="sm" />
             <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
-              A creative powerhouse based in Ethiopia, bringing brands to life with innovative design, marketing, and development solutions.
+              Real people in Addis creating work you're proud to show the world.
             </p>
           </div>
 
