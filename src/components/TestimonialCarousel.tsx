@@ -4,28 +4,28 @@ import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
-    quote: "Luminex transformed our brand identity completely. The attention to detail and creativity exceeded our expectations.",
-    author: "Sarah M.",
-    company: "TechStart Ethiopia",
+    quote: "They transformed how we look online — incredible team. Professional, fast, and they actually listen.",
+    author: "Daniel A.",
+    company: "Bekele Enterprises",
+    role: "Founder",
+  },
+  {
+    quote: "The logo they created for us has a hidden meaning that our customers love to discover. Pure genius.",
+    author: "Meron T.",
+    company: "Habesha Coffee",
     role: "CEO",
   },
   {
-    quote: "Their video production quality is world-class. They brought our vision to life with stunning visuals and storytelling.",
-    author: "Michael K.",
-    company: "Global Ventures",
+    quote: "Working with Luminex felt like having an in-house creative team. They finished on time and on budget.",
+    author: "James K.",
+    company: "Global Trade Co.",
     role: "Marketing Director",
   },
   {
-    quote: "Working with Luminex was seamless. They understood our brand essence and delivered beyond what we imagined.",
-    author: "Amara T.",
-    company: "Heritage Hotels",
+    quote: "Our social media engagement tripled after they took over our content strategy. Can't recommend them enough.",
+    author: "Fatima H.",
+    company: "Addis Fashion",
     role: "Brand Manager",
-  },
-  {
-    quote: "The digital marketing strategy they developed increased our online presence by 300%. Truly exceptional work.",
-    author: "David O.",
-    company: "E-Commerce Hub",
-    role: "Founder",
   },
 ];
 
