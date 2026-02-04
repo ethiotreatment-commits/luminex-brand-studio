@@ -9,10 +9,10 @@ interface LogoProps {
 }
 
 const sizeClasses = {
-  sm: "h-12",
-  md: "h-16",
-  lg: "h-28",
-  xl: "h-40 md:h-52",
+  sm: "h-16",
+  md: "h-24",
+  lg: "h-36",
+  xl: "h-52 md:h-64",
 };
 
 const Logo = ({ size = "md", showTagline = false, className, animated = true }: LogoProps) => {
@@ -50,16 +50,6 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
           )}
         />
         
-        {/* Animated glow dot effect overlay */}
-        <div 
-          className={cn(
-            "absolute top-[35%] left-[52%] w-2 h-2 rounded-full",
-            "bg-primary/0 shadow-[0_0_12px_4px_rgba(255,153,0,0.6)]",
-            "animate-glow-pulse pointer-events-none",
-            size === "sm" && "w-1.5 h-1.5 top-[38%] left-[54%]",
-            size === "xl" && "w-3 h-3"
-          )}
-        />
       </div>
     </div>
   );
