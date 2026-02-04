@@ -10,7 +10,7 @@ const services = [
   {
     icon: PenTool,
     title: "Graphic Design & Branding",
-    description: "Create a memorable visual identity that tells your brand story. We specialize in clever logos with hidden meanings — the kind people notice and never forget. From complete brand systems to marketing collateral, we obsess over every detail so you don't have to.",
+    description: "Create a memorable visual identity that tells your brand story. We specialize in clever logos with hidden meanings - the kind people notice and never forget. From complete brand systems to marketing collateral, we obsess over every detail so you don't have to.",
     features: [
       "Logo design with hidden symbolism",
       "Brand guidelines & identity systems",
@@ -22,7 +22,7 @@ const services = [
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    description: "We don't just run ads — we build strategies that actually move the needle. Our team understands both the numbers and the people behind them. Whether it's SEO, social media, or paid campaigns, we create marketing that gets real results.",
+    description: "We don't just run ads - we build strategies that actually move the needle. Our team understands both the numbers and the people behind them. Whether it's SEO, social media, or paid campaigns, we create marketing that gets real results.",
     features: [
       "Search Engine Optimization (SEO)",
       "Social media management & strategy",
@@ -46,7 +46,7 @@ const services = [
   {
     icon: Palette,
     title: "Content Creation",
-    description: "Great content isn't just pretty — it speaks to your audience. Our team creates everything from photography and copywriting to social posts that actually get engagement. We know what works because we're always learning, testing, and refining.",
+    description: "Great content isn't just pretty - it speaks to your audience. Our team creates everything from photography and copywriting to social posts that actually get engagement. We know what works because we're always learning, testing, and refining.",
     features: [
       "Professional photography & shoots",
       "Copywriting & messaging",

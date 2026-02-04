@@ -1,82 +1,104 @@
 import { useState } from "react";
 import { X, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
-const categories = ["All", "Graphics", "Video", "Digital Marketing", "Branding"];
+// Import portfolio images
+import project1 from "@/assets/portfolio/project-1.jpg";
+import project2 from "@/assets/portfolio/project-2.jpg";
+import project3 from "@/assets/portfolio/project-3.jpg";
+import project4 from "@/assets/portfolio/project-4.jpg";
+import project5 from "@/assets/portfolio/project-5.jpg";
+import project6 from "@/assets/portfolio/project-6.jpg";
+import project7 from "@/assets/portfolio/project-7.jpg";
+import project8 from "@/assets/portfolio/project-8.jpg";
+import project9 from "@/assets/portfolio/project-9.jpg";
+
+const categories = ["All", "Graphics", "Branding", "Digital Marketing", "Video"];
 
 const portfolioItems = [
   {
     id: 1,
-    title: "Ethiopian Coffee Brand Identity",
-    category: "Branding",
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
-    description: "Complete brand identity design for a premium Ethiopian coffee exporter, featuring hidden coffee bean motifs in the logo.",
+    title: "Book Promotional Design",
+    category: "Graphics",
+    image: project1,
+    description: "Eye-catching promotional graphic for a book launch with bold typography and creative visual elements.",
   },
   {
     id: 2,
-    title: "Tech Startup Launch Campaign",
-    category: "Digital Marketing",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
-    description: "Multi-platform digital marketing campaign that increased brand awareness by 250%.",
+    title: "Educational Campaign Design",
+    category: "Graphics",
+    image: project2,
+    description: "Informative and visually engaging graphic design for an educational awareness campaign.",
   },
   {
     id: 3,
-    title: "Luxury Hotel Promotional Video",
-    category: "Video",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
-    description: "Cinematic promotional video showcasing the elegance and heritage of a 5-star resort.",
+    title: "JL Furniture Brand Campaign",
+    category: "Branding",
+    image: project3,
+    description: "Creative brand campaign featuring dreamlike cloud imagery for a furniture company.",
   },
   {
     id: 4,
-    title: "Annual Report Design",
-    category: "Graphics",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80",
-    description: "Modern, data-driven annual report design with custom infographics and illustrations.",
+    title: "Furniture Brand Concept Art",
+    category: "Branding",
+    image: project4,
+    description: "Surreal space-themed concept art for JL Furniture showcasing creative brand storytelling.",
   },
   {
     id: 5,
-    title: "Fashion Brand Visual Identity",
-    category: "Branding",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-    description: "Elegant visual identity for a contemporary Ethiopian fashion label.",
+    title: "Suhan Travel Campaign",
+    category: "Digital Marketing",
+    image: project5,
+    description: "Vibrant travel agency promotional design featuring world landmarks and call-to-action.",
   },
   {
     id: 6,
-    title: "Documentary Production",
-    category: "Video",
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80",
-    description: "Award-winning documentary highlighting cultural heritage and modern innovation.",
+    title: "UNV Ethiopia Motivational",
+    category: "Digital Marketing",
+    image: project6,
+    description: "Powerful motivational design for UNV Ethiopia featuring bold typography and dynamic imagery.",
   },
   {
     id: 7,
-    title: "E-commerce Social Campaign",
+    title: "Security Camera Promo",
     category: "Digital Marketing",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80",
-    description: "Comprehensive social media strategy that drove 400% increase in online sales.",
+    image: project7,
+    description: "Creative promotional design for security camera products with compelling visuals.",
   },
   {
     id: 8,
-    title: "Restaurant Menu Design",
+    title: "Amibara Properties Campaign",
+    category: "Branding",
+    image: project8,
+    description: "Modern real estate promotional design for Amibara Properties featuring architectural visualization.",
+  },
+  {
+    id: 9,
+    title: "HASED Real Estate Holiday",
     category: "Graphics",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
-    description: "Sophisticated menu design blending traditional aesthetics with modern typography.",
+    image: project9,
+    description: "Holiday greeting design for HASED Real Estate with powerful imagery and brand messaging.",
   },
 ];
 
 interface PortfolioGridProps {
   limit?: number;
   showFilters?: boolean;
+  showViewMore?: boolean;
 }
 
-const PortfolioGrid = ({ limit, showFilters = true }: PortfolioGridProps) => {
+const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: PortfolioGridProps) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
+  const [showAllModal, setShowAllModal] = useState(false);
 
   const filteredItems = portfolioItems.filter(
     (item) => activeCategory === "All" || item.category === activeCategory
   );
 
   const displayItems = limit ? filteredItems.slice(0, limit) : filteredItems;
+  const remainingItems = limit ? filteredItems.slice(limit) : [];
 
   return (
     <>
@@ -132,7 +154,20 @@ const PortfolioGrid = ({ limit, showFilters = true }: PortfolioGridProps) => {
         ))}
       </div>
 
-      {/* Lightbox Modal */}
+      {/* View More Button */}
+      {showViewMore && remainingItems.length > 0 && (
+        <div className="text-center mt-10">
+          <Button 
+            variant="glowOutline" 
+            size="lg" 
+            onClick={() => setShowAllModal(true)}
+          >
+            View More Projects
+          </Button>
+        </div>
+      )}
+
+      {/* Single Item Lightbox Modal */}
       {selectedItem && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/95 backdrop-blur-xl animate-fade-in"
@@ -171,6 +206,59 @@ const PortfolioGrid = ({ limit, showFilters = true }: PortfolioGridProps) => {
                   <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* View All Modal */}
+      {showAllModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/95 backdrop-blur-xl animate-fade-in overflow-y-auto"
+          onClick={() => setShowAllModal(false)}
+        >
+          <div
+            className="relative max-w-6xl w-full bg-card border border-border rounded-2xl overflow-hidden animate-scale-in my-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 z-10 bg-card border-b border-border p-6 flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-foreground">All Projects</h2>
+              <button
+                onClick={() => setShowAllModal(false)}
+                className="w-10 h-10 rounded-full bg-background/80 flex items-center justify-center text-foreground hover:text-primary transition-colors"
+                aria-label="Close modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {portfolioItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowAllModal(false);
+                    setTimeout(() => setSelectedItem(item), 100);
+                  }}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="text-primary text-xs font-semibold uppercase tracking-wider">
+                      {item.category}
+                    </span>
+                    <h3 className="text-foreground font-bold text-sm mt-1">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

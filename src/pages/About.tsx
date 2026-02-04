@@ -34,7 +34,8 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">We started because we love what happens when good ideas meet real talent. We're a tight group in Addis who eat, sleep, and breathe creative work graphic designers who obsess over every detail, digital marketers who understand numbers and people, video editors who turn raw footage into something cinematic, content creators who know how to speak to an audience, creative directors who keep the vision clear, and developers who make sure everything runs smoothly.<em>and</em> people, video editors who turn raw footage into something cinematic, content creators who know how to speak to an audience, creative directors who keep the vision clear, and developers who make sure everything runs smoothly.
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We started because we love what happens when good ideas meet real talent. We're a tight group in Addis who eat, sleep, and breathe creative work - graphic designers who obsess over every detail, digital marketers who understand numbers and people, video editors who turn raw footage into something cinematic, content creators who know how to speak to an audience, creative directors who keep the vision clear, and developers who make sure everything runs smoothly.
               </p>
 
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -76,7 +77,7 @@ const About = () => {
                 <Target className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">We exist to help brands shine brighter through logos people remember forever, campaigns that actually move the needle, videos that stop the scroll. We listen hard, think creatively, and deliver work we're proud to put our name on. Simple as that.</p>
+              <p className="text-muted-foreground leading-relaxed">We exist to help brands shine brighter - through logos people remember forever, campaigns that actually move the needle, videos that stop the scroll. We listen hard, think creatively, and deliver work we're proud to put our name on. Simple as that.</p>
             </div>
 
             {/* Vision */}
@@ -88,7 +89,7 @@ const About = () => {
                 <Eye className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">To become the go-to creative partner in Ethiopia and across borders where ambitious brands come when they want fresh ideas, reliable execution, and results that make them feel unstoppable.</p>
+              <p className="text-muted-foreground leading-relaxed">To become the go-to creative partner in Ethiopia and across borders - where ambitious brands come when they want fresh ideas, reliable execution, and results that make them feel unstoppable.</p>
             </div>
           </div>
         </div>
