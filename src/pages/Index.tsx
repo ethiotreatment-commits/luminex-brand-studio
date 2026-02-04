@@ -29,7 +29,7 @@ const services = [{
   title: "Web Development",
   description: "Fast, beautiful, responsive websites and apps that just work."
 }];
-const whyLuminex = ["We actually finish what we start — on time, on budget", "Every piece gets multiple eyes; nothing sloppy leaves", "Ethiopian energy + global standards", "We tell you straight if something won't work", "We love solving problems creatively"];
+const whyLuminex = ["We actually finish what we start - on time, on budget", "Every piece gets multiple eyes; nothing sloppy leaves", "Ethiopian energy + global standards", "We tell you straight if something won't work", "We love solving problems creatively"];
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -54,7 +54,7 @@ const Index = () => {
           <p className="mt-10 text-xl md:text-2xl text-foreground max-w-3xl mx-auto opacity-0 animate-fade-in font-medium" style={{
           animationDelay: "400ms",
           animationFillMode: "forwards"
-        }}>We're Luminex real people in Addis creating work you're proud to show the world.</p>
+        }}>We're Luminex - real people in Addis creating work you're proud to show the world.</p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in" style={{
           animationDelay: "600ms",
@@ -92,7 +92,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Light up your brand.
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll we bring your vision to life.</p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll - we bring your vision to life.</p>
           </div>
         </div>
       </section>
@@ -136,16 +136,8 @@ const Index = () => {
         <div className="container mx-auto px-6 relative">
           <SectionHeading subtitle="Our Work" title="Featured Projects" description="A glimpse into the work we're proud of." />
 
-          <PortfolioGrid limit={4} showFilters={false} />
+          <PortfolioGrid limit={4} showFilters={false} showViewMore={true} />
 
-          <div className="text-center mt-12">
-            <Button variant="glowOutline" size="lg" asChild>
-              <Link to="/portfolio">
-                View All Projects
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
