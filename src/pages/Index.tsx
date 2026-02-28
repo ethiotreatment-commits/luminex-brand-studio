@@ -54,7 +54,7 @@ const Index = () => {
           <p className="mt-10 text-xl md:text-2xl text-foreground max-w-3xl mx-auto opacity-0 animate-fade-in font-medium" style={{
           animationDelay: "400ms",
           animationFillMode: "forwards"
-        }}>We're Luminex - real people in Addis creating work you're proud to show the world.</p>
+        }}>Bringing your boldest vision to powerful reality.</p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in" style={{
           animationDelay: "600ms",
