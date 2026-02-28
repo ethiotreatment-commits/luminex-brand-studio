@@ -29,7 +29,7 @@ const services = [{
   title: "Web Development",
   description: "Fast, beautiful, responsive websites and apps that just work."
 }];
-const whyLuminex = ["We actually finish what we start - on time, on budget", "Every piece gets multiple eyes; nothing sloppy leaves", "Ethiopian energy + global standards", "We tell you straight if something won't work", "We love solving problems creatively"];
+const whyLuminex = ["We actually finish what we start - on time, on budget", "Every piece gets multiple eyes; nothing sloppy leaves", "Ethiopian energy + global standards", "We love solving problems creatively"];
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
