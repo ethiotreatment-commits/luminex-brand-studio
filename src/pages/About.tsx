@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Eye } from "lucide-react";
+import { ArrowRight, Target, Eye, Sparkles, Shield, Users, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const coreValues = [
+  {
+    icon: Sparkles,
+    title: "Strategic Creativity",
+    description: "Fresh, intelligent concepts that surprise and connect, especially through thoughtful branding with subtle, meaningful details.",
+  },
+  {
+    icon: Shield,
+    title: "Uncompromising Delivery",
+    description: "On-time, high-quality work delivered without shortcuts.",
+  },
+  {
+    icon: Users,
+    title: "Client-Centric Partnership",
+    description: "Deep listening to understand true needs and build enduring trust.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Sustainable Impact",
+    description: "Focus on long-term relationships and results that endure beyond single projects.",
+  },
+];
+
 const About = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -50,8 +74,23 @@ const About = () => {
                 We believe creativity without strategy is decoration and strategy without execution is incomplete. That's why every project begins with defined objectives, clear KPIs, and a results-driven mindset. From rebrands to full-scale marketing campaigns and digital solutions, our work is designed to generate visibility, engagement, and sustainable growth.
               </p>
 
-              <p className="text-xl text-foreground leading-relaxed font-medium">
+              <p className="text-xl text-foreground leading-relaxed font-medium mb-12">
                 Our strength lies in strategic thinking, disciplined execution, technological adaptability, and an unwavering commitment to tangible results. We approach every collaboration with precision and the understanding that your brand is an investment and it deserves outcomes that move it forward.
+              </p>
+
+              {/* Guiding Principles */}
+              <div className="bg-card border border-border rounded-2xl p-8 my-12">
+                <h3 className="text-xl font-bold text-foreground mb-6">Our guiding principles:</h3>
+                <ul className="space-y-4">
+                  {["Creativity guided by strategy", "Precision infused with purpose", "Lasting impact over fleeting trends"].map((item, index) => <li key={index} className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>)}
+                </ul>
+              </div>
+
+              <p className="text-xl text-foreground leading-relaxed font-medium italic">
+                We would be honored to learn about your vision and explore how we can help bring it to life with excellence.
               </p>
             </div>
           </div>
@@ -71,7 +110,7 @@ const About = () => {
                 <Target className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">We exist to help brands shine brighter - through logos people remember forever, campaigns that actually move the needle, videos that stop the scroll. We listen hard, think creatively, and deliver work we're proud to put our name on. Simple as that.</p>
+              <p className="text-muted-foreground leading-relaxed">We exist to empower brands with exceptional creative solutions that build lasting recognition, drive meaningful engagement, and deliver measurable growth. Through strategic design, compelling storytelling, and disciplined execution, we create work of enduring quality that our clients are proud to represent — and that resonates deeply with their audiences.</p>
             </div>
 
             {/* Vision */}
@@ -83,8 +122,28 @@ const About = () => {
                 <Eye className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">To become the go-to creative partner in Ethiopia and across borders - where ambitious brands come when they want fresh ideas, reliable execution, and results that make them feel unstoppable.</p>
+              <p className="text-muted-foreground leading-relaxed">To establish ourselves as the premier creative partner in Ethiopia and a trusted choice for ambitious brands worldwide — where innovative ideas, flawless execution, and proven results converge to help organizations achieve their full potential and stand out with confidence.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Core Values</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {coreValues.map((value, index) => (
+              <div key={value.title} className="bg-card border border-border rounded-2xl p-6 card-glow opacity-0 animate-fade-in" style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <value.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -94,10 +153,10 @@ const About = () => {
         <div className="absolute inset-0 gradient-spotlight opacity-50" />
         <div className="container mx-auto px-6 relative text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready to Work Together?
+            Ready to Elevate Your Brand?
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Let's combine your vision with our expertise to create something extraordinary.
+            We're here to partner with you on projects that matter. Let's discuss how we can help your vision become reality with precision and purpose.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact">

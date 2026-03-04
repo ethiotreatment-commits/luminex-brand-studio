@@ -10,61 +10,61 @@ const services = [
   {
     icon: PenTool,
     title: "Graphic Design & Branding",
-    description: "Create a memorable visual identity that tells your brand story. We specialize in clever logos with hidden meanings - the kind people notice and never forget. From complete brand systems to marketing collateral, we obsess over every detail so you don't have to.",
+    description: "We craft distinctive visual identities that authentically capture your brand's essence and leave a lasting impression. Our specialty lies in intelligent logo design incorporating layered symbolism — elements that invite discovery and foster memorability. From comprehensive brand systems to supporting collateral, we ensure every detail aligns with your strategic goals.",
     features: [
-      "Logo design with hidden symbolism",
-      "Brand guidelines & identity systems",
-      "Print & packaging design",
-      "Marketing collateral",
-      "Illustration & iconography",
+      "Logo design with embedded symbolism and meaning",
+      "Comprehensive brand guidelines and identity systems",
+      "Print and packaging design",
+      "Marketing collateral (business cards, brochures, etc.)",
+      "Custom illustration and iconography",
     ],
   },
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    description: "We don't just run ads - we build strategies that actually move the needle. Our team understands both the numbers and the people behind them. Whether it's SEO, social media, or paid campaigns, we create marketing that gets real results.",
+    description: "We develop integrated strategies that combine data insight with audience understanding to achieve tangible business outcomes. Rather than simply executing tactics, we focus on performance that grows visibility, engagement, and revenue.",
     features: [
       "Search Engine Optimization (SEO)",
-      "Social media management & strategy",
-      "Paid advertising (Google, Meta, TikTok)",
+      "Social media strategy and management",
+      "Paid advertising across Google, Meta, TikTok, and more",
       "Email marketing campaigns",
-      "Analytics & performance reporting",
+      "Analytics, reporting, and continuous optimization",
     ],
   },
   {
     icon: Video,
     title: "Video Production & Editing",
-    description: "From raw footage to cinematic final cuts, we produce videos that stop the scroll. Our editors and producers know how to tell stories that captivate, whether it's a 15-second social clip or a full corporate documentary.",
+    description: "We transform concepts into captivating visual stories — from concise social content to polished corporate narratives. Our production and post-production expertise ensures videos that command attention and communicate with clarity and emotion.",
     features: [
-      "Commercial & promotional videos",
-      "Corporate documentaries",
+      "Commercial and promotional videos",
+      "Corporate documentaries and brand films",
       "Social media content (Reels, TikToks, Stories)",
-      "Motion graphics & animation",
-      "Post-production & color grading",
+      "Motion graphics and animation",
+      "Professional editing, color grading, and sound design",
     ],
   },
   {
     icon: Palette,
     title: "Content Creation",
-    description: "Great content isn't just pretty - it speaks to your audience. Our team creates everything from photography and copywriting to social posts that actually get engagement. We know what works because we're always learning, testing, and refining.",
+    description: "We produce high-impact content that engages audiences and strengthens brand voice. By combining creative photography, strategic copywriting, and data-informed planning, we deliver assets that perform across channels.",
     features: [
-      "Professional photography & shoots",
-      "Copywriting & messaging",
-      "Social media content calendars",
-      "Blog & article writing",
-      "Content strategy & planning",
+      "Professional photography and on-location shoots",
+      "Copywriting and messaging development",
+      "Social media content calendars and execution",
+      "Blog, article, and long-form writing",
+      "Full content strategy and performance planning",
     ],
   },
   {
     icon: Globe,
     title: "Web Development",
-    description: "We build websites and apps that are fast, beautiful, and actually work. No bloated code, no frustrating user experiences. Just clean, responsive digital products that make your brand look as good online as it deserves.",
+    description: "We engineer clean, high-performance digital experiences that reflect your brand's professionalism. Our focus is on responsive, user-friendly sites and applications built for speed, security, and scalability.",
     features: [
       "Custom website development",
-      "E-commerce solutions",
-      "Web applications",
-      "Mobile-responsive design",
-      "Maintenance & ongoing support",
+      "E-commerce platforms and integrations",
+      "Web applications and interactive tools",
+      "Mobile-responsive and accessible design",
+      "Ongoing maintenance and technical support",
     ],
   },
 ];
@@ -88,7 +88,7 @@ const Services = () => {
               What We Offer
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
-              Everything you need to make your brand shine, done right.
+              Comprehensive creative and digital solutions designed to elevate your brand with strategy, precision, and measurable impact.
             </p>
           </div>
         </div>
@@ -158,10 +158,10 @@ const Services = () => {
         <div className="absolute inset-0 gradient-spotlight opacity-50" />
         <div className="container mx-auto px-6 relative text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Need Something Custom?
+            Need a Custom Solution?
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Every brand is unique. Let's talk about what you need and build a package that fits.
+            We understand that every brand has distinct requirements. Contact us to discuss your goals — we'll collaborate to design a tailored package that delivers exactly what you need.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact">
