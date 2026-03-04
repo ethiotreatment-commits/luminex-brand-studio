@@ -35,29 +35,23 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                We started because we love what happens when good ideas meet real talent. We're a tight group in Addis who eat, sleep, and breathe creative work - graphic designers who obsess over every detail, digital marketers who understand numbers and people, video editors who turn raw footage into something cinematic, content creators who know how to speak to an audience, creative directors who keep the vision clear, and developers who make sure everything runs smoothly.
+                We are a multidisciplinary creative agency based in Addis Ababa, Ethiopia, built on strategy, performance, and measurable results. Our team operates with one clear objective: delivering impactful solutions that drive real business growth.
               </p>
 
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                We're based in Addis Ababa, but we've already worked with clients from different corners of the world. We take on projects big and small, local or international, as long as there's a chance to do something meaningful.
+                Our graphic designers create purposeful visuals grounded in brand strategy. Our digital strategists combine data, market intelligence, and audience insights to guide every decision. Our video editors and content creators craft compelling narratives designed not just to inspire, but to convert. Our creative directors ensure strategic clarity across every touchpoint, while our developers build seamless, high-performance digital experiences that scale.
               </p>
 
-              <div className="bg-card border border-border rounded-2xl p-8 my-12">
-                <h3 className="text-xl font-bold text-foreground mb-6">What we care about most:</h3>
-                <ul className="space-y-4">
-                  {["Making work that feels fresh and clever (especially logos that have a little secret inside them)", "Delivering on time without cutting corners", "Actually listening to what the client needs", "Building long-term trust, not just one-off jobs"].map((item, index) => <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>)}
-                </ul>
-              </div>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                We integrate advanced AI tools and intelligent automation into our workflow — enhancing research, accelerating production, optimizing campaigns, and extracting actionable insights from data. Our AI proficiency allows us to move faster, test smarter, personalize content at scale, and continuously refine performance for measurable impact.
+              </p>
 
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                We're not the biggest agency out there, and we don't pretend to be. But we're damn good at what we do, and we pour everything into every project because we know how much your brand matters to you.
+                We believe creativity without strategy is decoration and strategy without execution is incomplete. That's why every project begins with defined objectives, clear KPIs, and a results-driven mindset. From rebrands to full-scale marketing campaigns and digital solutions, our work is designed to generate visibility, engagement, and sustainable growth.
               </p>
 
               <p className="text-xl text-foreground leading-relaxed font-medium">
-                If you're looking for a team that treats your vision like it's their own, let's talk.
+                Our strength lies in strategic thinking, disciplined execution, technological adaptability, and an unwavering commitment to tangible results. We approach every collaboration with precision and the understanding that your brand is an investment and it deserves outcomes that move it forward.
               </p>
             </div>
           </div>
