@@ -88,7 +88,7 @@ const Services = () => {
               What We Offer
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
-              Everything you need to make your brand shine, done right.
+              Comprehensive creative and digital solutions designed to elevate your brand with strategy, precision, and measurable impact.
             </p>
           </div>
         </div>
