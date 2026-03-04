@@ -158,10 +158,10 @@ const Services = () => {
         <div className="absolute inset-0 gradient-spotlight opacity-50" />
         <div className="container mx-auto px-6 relative text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Need Something Custom?
+            Need a Custom Solution?
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Every brand is unique. Let's talk about what you need and build a package that fits.
+            We understand that every brand has distinct requirements. Contact us to discuss your goals — we'll collaborate to design a tailored package that delivers exactly what you need.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact">
