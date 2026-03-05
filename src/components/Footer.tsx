@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Logo from "./Logo";
+import WaveAnimation from "./motion/WaveAnimation";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary/50 border-t border-border">
+    <footer className="relative bg-secondary/50 border-t border-border overflow-hidden">
+      <WaveAnimation />
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
