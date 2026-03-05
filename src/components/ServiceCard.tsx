@@ -13,10 +13,9 @@ const ServiceCard = ({ icon: Icon, title, description, className, delay = 0 }: S
   return (
     <div
       className={cn(
-        "group relative bg-card border border-border rounded-xl p-8 card-glow opacity-0 animate-fade-in",
+        "group relative bg-card border border-border rounded-xl p-8 card-glow",
         className
       )}
-      style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
     >
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-xl bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
