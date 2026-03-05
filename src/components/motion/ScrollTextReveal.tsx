@@ -36,16 +36,17 @@ const ScrollTextReveal = ({ text, className = "", highlightPhrases = [] }: Scrol
     offset: ["start start", "end start"],
   });
 
-  // Use a reasonable scroll height — ~5vh per word, capped
-  const scrollHeight = Math.max(250, Math.min(words.length * 8, 500));
+  // Generous scroll distance so every word fully reveals before unlocking
+  const scrollHeight = Math.max(300, words.length * 10);
 
   return (
     <div ref={containerRef} className="relative" style={{ height: `${scrollHeight}vh` }}>
       <div className="sticky top-0 min-h-screen flex items-center justify-center">
         <p className={`max-w-5xl mx-auto text-center leading-snug flex flex-wrap justify-center gap-x-[0.3em] gap-y-2 px-6 ${className}`}>
           {words.map((word, i) => {
-            const start = i / words.length;
-            const end = Math.min((i + 1.5) / words.length, 1);
+            // Map each word to a narrow band within 0–0.85 so last word fully resolves by 85% scroll
+            const start = (i / words.length) * 0.85;
+            const end = ((i + 1) / words.length) * 0.85;
             const isHighlighted = highlightMap.has(i);
             return (
               <Word
