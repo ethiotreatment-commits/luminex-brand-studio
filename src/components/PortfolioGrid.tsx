@@ -125,14 +125,24 @@ const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: Port
         {displayItems.map((item, index) => (
           <div
             key={item.id}
-            className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer card-glow opacity-0 animate-fade-in"
+            className="portfolio-scan group relative aspect-square rounded-xl overflow-hidden cursor-pointer card-glow opacity-0 animate-fade-in"
             style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
             onClick={() => setSelectedItem(item)}
           >
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="scan-brighten w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+            />
+
+            {/* Scan bar */}
+            <div
+              className="scan-bar absolute top-0 bottom-0 w-[30%] pointer-events-none z-[2]"
+              style={{
+                left: "-30%",
+                opacity: 0,
+                background: "linear-gradient(90deg, transparent, hsl(36 100% 50% / 0.25), hsl(36 100% 50% / 0.4), hsl(36 100% 50% / 0.25), transparent)",
+              }}
             />
             
             {/* Overlay */}
