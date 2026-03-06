@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Logo from "./Logo";
-import WaveAnimation from "./motion/WaveAnimation";
+import waveBg from "@/assets/wave-bg.jpg";
 
 const Footer = () => {
   return (
     <footer className="relative bg-secondary/50 border-t border-border overflow-hidden">
-      <WaveAnimation />
+      {/* Animated wave background */}
+      <div className="absolute bottom-0 left-0 w-full h-[200px] pointer-events-none overflow-hidden opacity-20">
+        <div className="absolute bottom-0 left-0 h-full animate-wave-scroll" style={{ width: '200%' }}>
+          <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
+          <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
+        </div>
+      </div>
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
