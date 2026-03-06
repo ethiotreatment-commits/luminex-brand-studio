@@ -42,11 +42,11 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
             sizeClasses[size],
             "w-auto object-contain relative z-10",
             "mix-blend-lighten",
-            "drop-shadow-[0_0_6px_rgba(255,153,0,0.15)]",
             "transition-all duration-300 ease-out",
             "group-hover:drop-shadow-[0_0_12px_rgba(255,153,0,0.25)]",
             "group-hover:scale-[1.02]",
-            "brightness-110 contrast-110"
+            "brightness-110 contrast-110",
+            "animate-logo-breathe"
           )}
         />
         
