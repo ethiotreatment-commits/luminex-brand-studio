@@ -14,6 +14,7 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 import ScrollTextReveal from "@/components/motion/ScrollTextReveal";
 import FloatingParticles from "@/components/motion/FloatingParticles";
 import GlowOrb from "@/components/motion/GlowOrb";
+import SectionSweepLine from "@/components/motion/SectionSweepLine";
 
 const services = [
   { icon: PenTool, title: "Graphic Design & Branding", description: "Smart logos with hidden meanings, complete brand identities, and visuals that stick." },
@@ -130,6 +131,7 @@ const Index = () => {
       />
 
       {/* Our Expertise Section */}
+      <SectionSweepLine>
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <FloatingParticles />
@@ -147,8 +149,10 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </SectionSweepLine>
 
       {/* Why Luminex Section */}
+      <SectionSweepLine>
       <section className="py-24 relative">
         <GlowOrb className="top-0 right-0" size={350} delay={1} />
         <div className="container mx-auto px-6">
@@ -175,8 +179,10 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </SectionSweepLine>
 
       {/* Featured Work Section */}
+      <SectionSweepLine>
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="container mx-auto px-6 relative">
@@ -188,8 +194,10 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
+      </SectionSweepLine>
 
       {/* Testimonials Section */}
+      <SectionSweepLine>
       <section className="py-24">
         <div className="container mx-auto px-6">
           <ScrollReveal>
@@ -200,6 +208,7 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
+      </SectionSweepLine>
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
