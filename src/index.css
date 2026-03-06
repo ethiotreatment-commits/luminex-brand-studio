@@ -255,6 +255,15 @@
     }
   }
 
+  @keyframes wave-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-wave-scroll {
+    animation: wave-scroll 25s linear infinite;
+  }
+
   .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out forwards;
   }
