@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionHeading from "@/components/SectionHeading";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import VideoPortfolioGrid from "@/components/VideoPortfolioGrid";
 
 const Portfolio = () => {
   return (
@@ -31,10 +33,35 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Grid */}
+      {/* Portfolio Tabs */}
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <PortfolioGrid showFilters={true} />
+          <Tabs defaultValue="graphics" className="w-full">
+            <div className="flex justify-center mb-12">
+              <TabsList className="bg-card border border-border p-1.5 rounded-full">
+                <TabsTrigger
+                  value="graphics"
+                  className="rounded-full px-6 py-2.5 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_0_15px_hsl(36_100%_50%/0.3)] transition-all duration-300"
+                >
+                  Graphics & Branding
+                </TabsTrigger>
+                <TabsTrigger
+                  value="videos"
+                  className="rounded-full px-6 py-2.5 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_0_15px_hsl(36_100%_50%/0.3)] transition-all duration-300"
+                >
+                  Video Portfolio
+                </TabsTrigger>
+              </TabsList>
+            </div>
+
+            <TabsContent value="graphics" className="mt-0">
+              <PortfolioGrid showFilters={true} />
+            </TabsContent>
+
+            <TabsContent value="videos" className="mt-0">
+              <VideoPortfolioGrid showFilters={true} />
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
