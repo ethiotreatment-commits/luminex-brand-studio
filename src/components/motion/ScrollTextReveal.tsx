@@ -36,8 +36,8 @@ const ScrollTextReveal = ({ text, className = "", highlightPhrases = [] }: Scrol
     offset: ["start start", "end start"],
   });
 
-  // Generous scroll distance so every word fully reveals before unlocking
-  const scrollHeight = Math.max(300, words.length * 10);
+  // Shorter scroll distance for faster reveal
+  const scrollHeight = Math.max(200, words.length * 6);
 
   return (
     <div ref={containerRef} className="relative" style={{ height: `${scrollHeight}vh` }}>
