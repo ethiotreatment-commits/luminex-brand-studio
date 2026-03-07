@@ -25,10 +25,11 @@ const services = [
 ];
 
 const whyLuminex = [
-  "We actually finish what we start - on time, on budget",
-  "Every piece gets multiple eyes; nothing sloppy leaves",
+  "We finish on time, on budget",
+  "Multiple eyes on every piece",
   "Ethiopian energy + global standards",
-  "We love solving problems creatively",
+  "Straight talk if something won't work",
+  "Creative problem solving",
 ];
 
 const Index = () => {
@@ -73,7 +74,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
             className="mt-10 text-xl md:text-2xl text-foreground max-w-3xl mx-auto font-medium"
           >
-            Bringing your boldest vision to powerful reality.
+            We're Luminex — real people in Addis creating work you're proud to show the world.
           </motion.p>
 
           <motion.div

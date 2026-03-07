@@ -48,7 +48,7 @@ const ScrollReactiveWave = () => {
   }, []);
 
   return (
-    <div className="absolute bottom-0 left-0 w-full h-[200px] pointer-events-none overflow-hidden opacity-20">
+    <div className="absolute bottom-0 left-0 w-full h-[400px] pointer-events-none overflow-hidden opacity-[0.18]">
       <div
         ref={containerRef}
         className="absolute bottom-0 left-0 h-full"
@@ -56,6 +56,23 @@ const ScrollReactiveWave = () => {
       >
         <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
         <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
+      </div>
+      {/* Sparkling highlights along wave */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: 3 + Math.random() * 3,
+              height: 3 + Math.random() * 3,
+              left: `${10 + i * 11}%`,
+              top: `${30 + Math.sin(i) * 20}%`,
+              background: 'radial-gradient(circle, rgba(255,204,153,0.8) 0%, transparent 70%)',
+              animation: `pulse-glow ${2 + i * 0.5}s ease-in-out ${i * 0.3}s infinite`,
+            }}
+          />
+        ))}
       </div>
     </div>
   );
