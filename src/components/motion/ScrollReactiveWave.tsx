@@ -4,7 +4,7 @@ import waveBg from "@/assets/wave-bg.jpg";
 const ScrollReactiveWave = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const offset = useRef(0);
-  const speed = useRef(0.5); // base px/frame
+  const speed = useRef(0.5);
   const lastScroll = useRef(0);
   const raf = useRef(0);
 
@@ -15,23 +15,23 @@ const ScrollReactiveWave = () => {
       lastScroll.current = current;
 
       if (delta > 0) {
-        // Scrolling down → faster rightward
         speed.current = 0.5 + Math.min(Math.abs(delta) * 0.08, 3);
       } else if (delta < 0) {
-        // Scrolling up → slow reverse
         speed.current = -0.3 - Math.min(Math.abs(delta) * 0.04, 1.5);
       }
     };
 
     const animate = () => {
-      // Decay speed toward base
       speed.current += (0.5 - speed.current) * 0.02;
       offset.current -= speed.current;
 
       if (containerRef.current) {
-        const w = containerRef.current.scrollWidth / 2;
-        if (Math.abs(offset.current) >= w) {
-          offset.current = offset.current % w;
+        const singleWidth = containerRef.current.scrollWidth / 3;
+        // Seamless wrap: keep offset within one tile width
+        if (offset.current <= -singleWidth) {
+          offset.current += singleWidth;
+        } else if (offset.current >= 0) {
+          offset.current -= singleWidth;
         }
         containerRef.current.style.transform = `translateX(${offset.current}px)`;
       }
@@ -51,13 +51,14 @@ const ScrollReactiveWave = () => {
     <div className="absolute bottom-0 left-0 w-full h-[400px] pointer-events-none overflow-hidden opacity-[0.18]">
       <div
         ref={containerRef}
-        className="absolute bottom-0 left-0 h-full"
-        style={{ width: "200%", willChange: "transform" }}
+        className="absolute bottom-0 left-0 h-full flex"
+        style={{ width: "300%", willChange: "transform" }}
       >
-        <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
-        <img src={waveBg} alt="" className="h-full w-1/2 object-cover inline-block" />
+        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
+        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
+        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
       </div>
-      {/* Sparkling highlights along wave */}
+      {/* Sparkling highlights */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <div
