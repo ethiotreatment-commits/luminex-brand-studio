@@ -28,9 +28,9 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
         {/* Glow effect behind logo */}
         <div 
           className={cn(
-            "absolute inset-0 blur-xl opacity-15 transition-opacity duration-500",
-            "bg-gradient-to-r from-transparent via-primary/20 to-transparent",
-            "group-hover:opacity-25"
+            "absolute inset-0 blur-xl opacity-[0.04] transition-opacity duration-500",
+            "bg-gradient-to-r from-transparent via-primary/10 to-transparent",
+            "group-hover:opacity-[0.08]"
           )} 
         />
         
@@ -46,7 +46,7 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
             "group-hover:drop-shadow-[0_0_12px_rgba(255,153,0,0.25)]",
             "group-hover:scale-[1.02]",
             "brightness-110 contrast-110",
-            "drop-shadow-[0_0_8px_rgba(255,153,0,0.15)]"
+            "drop-shadow-[0_0_6px_rgba(255,153,0,0.04)]"
           )}
         />
         
