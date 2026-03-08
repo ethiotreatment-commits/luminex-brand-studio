@@ -85,7 +85,7 @@ const companyGroups: CompanyGroup[] = [
     teaserCount: 2,
     videos: [
       { id: 400, title: "Consultancy Spotlight 1", category: "Video", type: "video", video: "/videos/cons.mp4", description: "Professional consultancy firm brand overview." },
-      { id: 401, title: "Consultancy Spotlight 2", category: "Video", type: "video", video: "/videos/cons2.mp4", description: "Corporate culture and expertise showcase." },
+      { id: 401, title: "Consultancy Spotlight 2", category: "Video", type: "video", video: "/videos/helt_3.mp4", description: "Comprehensive consultancy services showcase." },
       { id: 402, title: "Consultancy Spotlight 3", category: "Video", type: "video", video: "/videos/cons3.mp4", description: "Client success stories and professional impact." },
     ],
   },
