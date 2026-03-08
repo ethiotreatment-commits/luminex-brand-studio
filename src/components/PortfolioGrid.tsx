@@ -56,7 +56,7 @@ const companyGroups: CompanyGroup[] = [
     videos: [
       { id: 100, title: "Health Campaign 1", category: "Video", type: "video", video: "/videos/helt_1.mp4", description: "Promotional video for a leading health institution." },
       { id: 101, title: "Health Campaign 2", category: "Video", type: "video", video: "/videos/hett_2.mp4", description: "Dynamic health awareness campaign spot." },
-      { id: 102, title: "Health Campaign 3", category: "Video", type: "video", video: "/videos/helt_3.mp4", description: "Comprehensive healthcare services showcase." },
+      { id: 102, title: "Health Campaign 3", category: "Video", type: "video", video: "/videos/cons2.mp4", description: "Corporate culture and expertise showcase." },
     ],
   },
   {
@@ -67,8 +67,6 @@ const companyGroups: CompanyGroup[] = [
       { id: 200, title: "Hotel Experience 1", category: "Video", type: "video", video: "/videos/ho_1.mp4", description: "Luxurious hotel walkthrough and brand experience." },
       { id: 201, title: "Hotel Experience 2", category: "Video", type: "video", video: "/videos/ho2.mp4", description: "Highlights of world-class hospitality services." },
       { id: 202, title: "Hotel Experience 3", category: "Video", type: "video", video: "/videos/ho_3.mp4", description: "Capturing the elegant atmosphere and guest experience." },
-      { id: 203, title: "Hotel Experience 4", category: "Video", type: "video", video: "/videos/8.mp4", description: "Premium hotel ambiance and dining showcase." },
-      { id: 204, title: "Hotel Experience 5", category: "Video", type: "video", video: "/videos/6.mp4", description: "Behind the scenes of hospitality excellence." },
     ],
   },
   {
@@ -87,7 +85,7 @@ const companyGroups: CompanyGroup[] = [
     teaserCount: 2,
     videos: [
       { id: 400, title: "Consultancy Spotlight 1", category: "Video", type: "video", video: "/videos/cons.mp4", description: "Professional consultancy firm brand overview." },
-      { id: 401, title: "Consultancy Spotlight 2", category: "Video", type: "video", video: "/videos/cons2.mp4", description: "Corporate culture and expertise showcase." },
+      { id: 401, title: "Consultancy Spotlight 2", category: "Video", type: "video", video: "/videos/helt_3.mp4", description: "Comprehensive consultancy services showcase." },
       { id: 402, title: "Consultancy Spotlight 3", category: "Video", type: "video", video: "/videos/cons3.mp4", description: "Client success stories and professional impact." },
     ],
   },
@@ -104,6 +102,8 @@ const companyGroups: CompanyGroup[] = [
       { id: 505, title: "Travel Promo 6", category: "Video", type: "video", video: "/videos/2.mp4", description: "Wanderlust-inspiring travel campaign." },
       { id: 506, title: "Travel Promo 7", category: "Video", type: "video", video: "/videos/5.mp4", description: "Scenic travel experiences and adventures." },
       { id: 507, title: "Travel Promo 8", category: "Video", type: "video", video: "/videos/7.mp4", description: "Cultural travel exploration showcase." },
+      { id: 508, title: "Travel Promo 9", category: "Video", type: "video", video: "/videos/8.mp4", description: "Premium travel ambiance and destination showcase." },
+      { id: 509, title: "Travel Promo 10", category: "Video", type: "video", video: "/videos/6.mp4", description: "Behind the scenes of travel excellence." },
     ],
   },
 ];
