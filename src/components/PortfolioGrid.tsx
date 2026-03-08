@@ -297,7 +297,7 @@ const ImageLightbox = ({ item, onClose }: { item: PortfolioItem; onClose: () => 
   </div>
 );
 
-/* Video lightbox — 9:16 portrait */
+/* Video lightbox - 9:16 portrait */
 const VideoLightbox = ({ item, onClose }: { item: PortfolioItem; onClose: () => void }) => (
   <div className="relative w-full max-w-sm mx-auto animate-scale-in" onClick={(e) => e.stopPropagation()}>
     <button onClick={onClose} className="absolute -top-12 right-0 z-10 w-10 h-10 rounded-full bg-background/80 flex items-center justify-center text-foreground hover:text-primary transition-colors" aria-label="Close modal">
