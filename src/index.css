@@ -271,21 +271,6 @@
     filter: brightness(1.15);
   }
 
-  /* Logo breathing */
-  @keyframes logo-breathe {
-    0%, 100% {
-      transform: scale(1);
-      filter: drop-shadow(0 0 2px rgba(255,153,0,0.02));
-    }
-    50% {
-      transform: scale(1.015);
-      filter: drop-shadow(0 0 4px rgba(255,153,0,0.05));
-    }
-  }
-
-  .animate-logo-breathe {
-    animation: logo-breathe 35s ease-in-out infinite;
-  }
 
   /* Pulse animation for dot */
   @keyframes pulse-glow {
