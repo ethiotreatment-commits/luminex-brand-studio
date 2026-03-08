@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
-            <Logo showTagline size="sm" />
+            <Logo showTagline size="sm" className="items-start" />
             <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
               Creative excellence that lights up your brand story.
             </p>
