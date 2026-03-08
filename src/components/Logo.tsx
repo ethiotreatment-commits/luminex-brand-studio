@@ -46,7 +46,7 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
             "group-hover:drop-shadow-[0_0_12px_rgba(255,153,0,0.25)]",
             "group-hover:scale-[1.02]",
             "brightness-110 contrast-110",
-            "drop-shadow-[0_0_8px_rgba(255,153,0,0.15)]"
+            "drop-shadow-[0_0_6px_rgba(255,153,0,0.04)]"
           )}
         />
         
