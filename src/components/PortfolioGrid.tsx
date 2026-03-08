@@ -186,10 +186,7 @@ const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: Port
               <div key={group.company} className="space-y-6">
                 {/* Company header */}
                 <div>
-                  <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em]">
-                    {group.sector}
-                  </span>
-                  <h3 className="text-2xl font-bold text-foreground mt-1">{group.company}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{group.sector}</h3>
                 </div>
 
                 {/* Video grid */}
