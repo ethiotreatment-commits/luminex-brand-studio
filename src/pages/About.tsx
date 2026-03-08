@@ -212,7 +212,7 @@ const About = () => {
                     <Eye className="w-7 h-7 text-primary" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-                  <p className="text-muted-foreground leading-relaxed">To establish ourselves as the premier creative partner in Ethiopia and a trusted choice for ambitious brands worldwide — where innovative ideas, flawless execution, and proven results converge to help organizations achieve their full potential and stand out with confidence.</p>
+                  <p className="text-muted-foreground leading-relaxed">To establish ourselves as the premier creative partner in Ethiopia and a trusted choice for ambitious brands worldwide, where innovative ideas, flawless execution, and proven results converge to help organizations achieve their full potential and stand out with confidence.</p>
                 </div>
               </motion.div>
             </ScrollReveal>

@@ -34,7 +34,7 @@ const services = [
   {
     icon: Video,
     title: "Video Production & Editing",
-    description: "We transform concepts into captivating visual stories — from concise social content to polished corporate narratives. Our production and post-production expertise ensures videos that command attention and communicate with clarity and emotion.",
+    description: "We transform concepts into captivating visual stories, from concise social content to polished corporate narratives. Our production and post-production expertise ensures videos that command attention and communicate with clarity and emotion.",
     features: [
       "Commercial and promotional videos",
       "Corporate documentaries and brand films",

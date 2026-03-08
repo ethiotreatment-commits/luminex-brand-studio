@@ -114,7 +114,7 @@ const Index = () => {
 
       {/* Scroll-scrubbed text reveal section */}
       <ScrollTextReveal
-        text="From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll — we bring your vision to life with strategy, precision, and creative excellence that drives real results."
+        text="From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll - we bring your vision to life with strategy, precision, and creative excellence that drives real results."
         className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
         highlightPhrases={[
           "smart logos",
