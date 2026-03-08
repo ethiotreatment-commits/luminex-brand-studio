@@ -27,13 +27,10 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
       <div className="relative">
         {/* Glow effect behind logo */}
         <div 
-          className={cn(
-            "absolute inset-0 blur-xl opacity-[0.02]",
-            "bg-gradient-to-r from-transparent via-primary/5 to-transparent"
-          )} 
+          className="absolute inset-[-20%] blur-2xl opacity-[0.12] bg-[radial-gradient(circle,rgba(255,153,0,0.25)_0%,transparent_70%)]"
         />
         
-        {/* Main logo image with enhanced styling */}
+        {/* Main logo image */}
         <img
           src={luminexLogo}
           alt="Luminex - Light up your brand"
@@ -42,7 +39,7 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
             "w-auto object-contain relative z-10",
             "mix-blend-lighten",
             "brightness-110 contrast-110",
-            "drop-shadow-[0_0_3px_rgba(255,153,0,0.02)]"
+            "drop-shadow-[0_0_8px_rgba(255,153,0,0.08)]"
           )}
         />
         
