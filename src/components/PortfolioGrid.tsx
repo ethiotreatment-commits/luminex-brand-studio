@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { X, ExternalLink, Play } from "lucide-react";
+import { X, ExternalLink, Play, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -24,9 +24,11 @@ type PortfolioItem = {
   type: "image" | "video";
   image?: string;
   video?: string;
+  company?: string;
+  sector?: string;
 };
 
-const portfolioItems: PortfolioItem[] = [
+const imageItems: PortfolioItem[] = [
   { id: 1, title: "Book Promotional Design", category: "Graphics", type: "image", image: project1, description: "Eye-catching promotional graphic for a book launch with bold typography and creative visual elements." },
   { id: 2, title: "Educational Campaign Design", category: "Graphics", type: "image", image: project2, description: "Informative and visually engaging graphic design for an educational awareness campaign." },
   { id: 3, title: "JL Furniture Brand Campaign", category: "Branding", type: "image", image: project3, description: "Creative brand campaign featuring dreamlike cloud imagery for a furniture company." },
@@ -36,17 +38,77 @@ const portfolioItems: PortfolioItem[] = [
   { id: 7, title: "Security Camera Promo", category: "Digital Marketing", type: "image", image: project7, description: "Creative promotional design for security camera products with compelling visuals." },
   { id: 8, title: "Amibara Properties Campaign", category: "Branding", type: "image", image: project8, description: "Modern real estate promotional design for Amibara Properties featuring architectural visualization." },
   { id: 9, title: "HASED Real Estate Holiday", category: "Graphics", type: "image", image: project9, description: "Holiday greeting design for HASED Real Estate with powerful imagery and brand messaging." },
-  // Video items
-  { id: 10, title: "Brand Story — Luminex", category: "Video", type: "video", video: "/videos/1.mp4", description: "A cinematic brand story showcasing Luminex's creative journey and mission." },
-  { id: 11, title: "Product Launch Campaign", category: "Video", type: "video", video: "/videos/2.mp4", description: "High-energy product launch ad designed to drive engagement and conversions." },
-  { id: 12, title: "How It Works — Explainer", category: "Video", type: "video", video: "/videos/15-2.mp4", description: "Clear and engaging explainer video breaking down a complex service offering." },
-  { id: 13, title: "Social Media Reel", category: "Video", type: "video", video: "/videos/8.mp4", description: "Scroll-stopping social media reel crafted for maximum reach and engagement." },
-  { id: 14, title: "Event Recap — Annual Gala", category: "Video", type: "video", video: "/videos/6.mp4", description: "Beautifully captured highlights from a prestigious annual gala event." },
-  { id: 15, title: "Brand Identity Reveal", category: "Video", type: "video", video: "/videos/17_1.mp4", description: "Dramatic reveal of a complete brand identity transformation." },
-  { id: 16, title: "Digital Ad Campaign", category: "Video", type: "video", video: "/videos/14.mp4", description: "Performance-driven digital advertisement for a cross-platform campaign." },
-  { id: 17, title: "Behind the Scenes", category: "Video", type: "video", video: "/videos/13_1.mp4", description: "Authentic behind-the-scenes content showing the creative process." },
-  { id: 18, title: "Corporate Overview", category: "Video", type: "video", video: "/videos/16.mp4", description: "Professional corporate overview video for investor and partner presentations." },
-  { id: 19, title: "Conference Highlights", category: "Video", type: "video", video: "/videos/18.mp4", description: "Dynamic highlights reel from a major industry conference." },
+];
+
+// Video items grouped by company/sector
+type CompanyGroup = {
+  company: string;
+  sector: string;
+  teaserCount: number;
+  videos: PortfolioItem[];
+};
+
+const companyGroups: CompanyGroup[] = [
+  {
+    company: "Medhanit Health",
+    sector: "Health Sector",
+    teaserCount: 2,
+    videos: [
+      { id: 100, title: "Brand Story", category: "Video", type: "video", video: "/videos/1.mp4", description: "A cinematic brand story for Medhanit Health showcasing their mission and values." },
+      { id: 101, title: "Service Overview", category: "Video", type: "video", video: "/videos/2.mp4", description: "Comprehensive overview of healthcare services and patient care journey." },
+      { id: 102, title: "Campaign Spot", category: "Video", type: "video", video: "/videos/5.mp4", description: "Awareness campaign spot promoting community health initiatives." },
+      { id: 103, title: "Testimonial Reel", category: "Video", type: "video", video: "/videos/7.mp4", description: "Patient testimonial compilation showcasing real stories and results." },
+    ],
+  },
+  {
+    company: "Habesha Grand Hotel",
+    sector: "Hotel & Hospitality",
+    teaserCount: 2,
+    videos: [
+      { id: 200, title: "Hotel Experience", category: "Video", type: "video", video: "/videos/8.mp4", description: "Luxurious walkthrough of the Habesha Grand Hotel experience." },
+      { id: 201, title: "Event Highlights", category: "Video", type: "video", video: "/videos/6.mp4", description: "Highlights from a prestigious gala event hosted at the hotel." },
+      { id: 202, title: "Dining & Lounge", category: "Video", type: "video", video: "/videos/10.mp4", description: "Showcase of world-class dining and lounge atmosphere." },
+      { id: 203, title: "Behind the Scenes", category: "Video", type: "video", video: "/videos/11.mp4", description: "Behind-the-scenes look at hospitality excellence and staff dedication." },
+    ],
+  },
+  {
+    company: "Addis Style Retail",
+    sector: "Retail & Fashion",
+    teaserCount: 2,
+    videos: [
+      { id: 300, title: "Brand Identity Reveal", category: "Video", type: "video", video: "/videos/17_1.mp4", description: "Dramatic reveal of the new Addis Style brand identity." },
+      { id: 301, title: "Collection Launch", category: "Video", type: "video", video: "/videos/14.mp4", description: "High-energy launch campaign for the seasonal collection." },
+      { id: 302, title: "Lookbook Video", category: "Video", type: "video", video: "/videos/17_1-2.mp4", description: "Stylish lookbook video showcasing key pieces and trends." },
+      { id: 303, title: "Social Media Reel", category: "Video", type: "video", video: "/videos/14-2.mp4", description: "Scroll-stopping social reel crafted for maximum engagement." },
+    ],
+  },
+  {
+    company: "EthioTech Solutions",
+    sector: "Technology",
+    teaserCount: 2,
+    videos: [
+      { id: 400, title: "Product Explainer", category: "Video", type: "video", video: "/videos/15-2.mp4", description: "Clear explainer video breaking down the SaaS platform features." },
+      { id: 401, title: "Corporate Overview", category: "Video", type: "video", video: "/videos/16.mp4", description: "Professional overview for investor and partner presentations." },
+      { id: 402, title: "Demo Walkthrough", category: "Video", type: "video", video: "/videos/15-2-2.mp4", description: "Step-by-step product demo highlighting key workflows." },
+      { id: 403, title: "Company Culture", category: "Video", type: "video", video: "/videos/16-2.mp4", description: "Inside look at the innovative culture driving EthioTech forward." },
+    ],
+  },
+  {
+    company: "Selam Events",
+    sector: "Events & Entertainment",
+    teaserCount: 2,
+    videos: [
+      { id: 500, title: "Conference Highlights", category: "Video", type: "video", video: "/videos/18.mp4", description: "Dynamic highlights from a major industry conference." },
+      { id: 501, title: "BTS Creative Process", category: "Video", type: "video", video: "/videos/13_1.mp4", description: "Authentic behind-the-scenes of the creative production process." },
+      { id: 502, title: "Festival Recap", category: "Video", type: "video", video: "/videos/18-2.mp4", description: "Vibrant recap reel from an annual cultural festival celebration." },
+      { id: 503, title: "Promo Teaser", category: "Video", type: "video", video: "/videos/13_1-2.mp4", description: "High-impact teaser to build anticipation for upcoming events." },
+    ],
+  },
+];
+
+const allPortfolioItems: PortfolioItem[] = [
+  ...imageItems,
+  ...companyGroups.flatMap((g) => g.videos),
 ];
 
 interface PortfolioGridProps {
@@ -58,14 +120,25 @@ interface PortfolioGridProps {
 const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: PortfolioGridProps) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-  const [showAllModal, setShowAllModal] = useState(false);
+  const [expandedCompanies, setExpandedCompanies] = useState<Set<string>>(new Set());
 
-  const filteredItems = portfolioItems.filter(
+  const showImages = activeCategory === "All" || activeCategory !== "Video";
+  const showVideos = activeCategory === "All" || activeCategory === "Video";
+
+  const filteredImages = imageItems.filter(
     (item) => activeCategory === "All" || item.category === activeCategory
   );
 
-  const displayItems = limit ? filteredItems.slice(0, limit) : filteredItems;
-  const remainingItems = limit ? filteredItems.slice(limit) : [];
+  const displayImages = limit && !showVideos ? filteredImages.slice(0, limit) : filteredImages;
+
+  const toggleCompany = (company: string) => {
+    setExpandedCompanies((prev) => {
+      const next = new Set(prev);
+      if (next.has(company)) next.delete(company);
+      else next.add(company);
+      return next;
+    });
+  };
 
   return (
     <>
@@ -88,21 +161,64 @@ const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: Port
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {displayItems.map((item, index) =>
-          item.type === "video" ? (
-            <VideoCard key={item.id} item={item} index={index} onClick={() => setSelectedItem(item)} />
-          ) : (
+      {/* Image grid */}
+      {showImages && activeCategory !== "Video" && displayImages.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+          {displayImages.map((item, index) => (
             <ImageCard key={item.id} item={item} index={index} onClick={() => setSelectedItem(item)} />
-          )
-        )}
-      </div>
+          ))}
+        </div>
+      )}
 
-      {showViewMore && remainingItems.length > 0 && (
-        <div className="text-center mt-10">
-          <Button variant="glowOutline" size="lg" onClick={() => setShowAllModal(true)}>
-            View More Projects
-          </Button>
+      {/* Video company groups */}
+      {showVideos && (
+        <div className="space-y-16">
+          {activeCategory !== "Video" && filteredImages.length > 0 && (
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-border" />
+              <h3 className="text-lg font-semibold text-primary uppercase tracking-wider">Video Portfolio</h3>
+              <div className="h-px flex-1 bg-border" />
+            </div>
+          )}
+
+          {companyGroups.map((group) => {
+            const isExpanded = expandedCompanies.has(group.company);
+            const visibleVideos = isExpanded ? group.videos : group.videos.slice(0, group.teaserCount);
+            const hasMore = group.videos.length > group.teaserCount;
+
+            return (
+              <div key={group.company} className="space-y-6">
+                {/* Company header */}
+                <div>
+                  <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em]">
+                    {group.sector}
+                  </span>
+                  <h3 className="text-2xl font-bold text-foreground mt-1">{group.company}</h3>
+                </div>
+
+                {/* Video grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {visibleVideos.map((item, index) => (
+                    <VideoCard key={item.id} item={item} index={index} onClick={() => setSelectedItem(item)} />
+                  ))}
+                </div>
+
+                {/* View More / Less */}
+                {hasMore && (
+                  <button
+                    onClick={() => toggleCompany(group.company)}
+                    className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all duration-300"
+                  >
+                    {isExpanded ? (
+                      <>Show Less <ChevronUp className="w-4 h-4" /></>
+                    ) : (
+                      <>View More ({group.videos.length - group.teaserCount} more) <ChevronDown className="w-4 h-4" /></>
+                    )}
+                  </button>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
 
@@ -117,46 +233,6 @@ const PortfolioGrid = ({ limit, showFilters = true, showViewMore = false }: Port
           ) : (
             <ImageLightbox item={selectedItem} onClose={() => setSelectedItem(null)} />
           )}
-        </div>
-      )}
-
-      {/* View All Modal */}
-      {showAllModal && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/95 backdrop-blur-xl animate-fade-in overflow-y-auto"
-          onClick={() => setShowAllModal(false)}
-        >
-          <div
-            className="relative max-w-6xl w-full bg-card border border-border rounded-2xl overflow-hidden animate-scale-in my-8"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="sticky top-0 z-10 bg-card border-b border-border p-6 flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-foreground">All Projects</h2>
-              <button onClick={() => setShowAllModal(false)} className="w-10 h-10 rounded-full bg-background/80 flex items-center justify-center text-foreground hover:text-primary transition-colors" aria-label="Close modal">
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {portfolioItems.map((item) => (
-                <div
-                  key={item.id}
-                  className={cn("group relative rounded-xl overflow-hidden cursor-pointer", item.type === "video" ? "aspect-[9/16]" : "aspect-square")}
-                  onClick={(e) => { e.stopPropagation(); setShowAllModal(false); setTimeout(() => setSelectedItem(item), 100); }}
-                >
-                  {item.type === "video" ? (
-                    <video src={item.video} muted loop playsInline preload="metadata" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  ) : (
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <span className="text-primary text-xs font-semibold uppercase tracking-wider">{item.category}</span>
-                    <h3 className="text-foreground font-bold text-sm mt-1">{item.title}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       )}
     </>
@@ -187,23 +263,21 @@ const VideoCard = ({ item, index, onClick }: { item: PortfolioItem; index: numbe
   return (
     <div
       className="portfolio-scan group relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer card-glow opacity-0 animate-fade-in"
-      style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
+      style={{ animationDelay: `${index * 80}ms`, animationFillMode: "forwards" }}
       onClick={onClick}
       onMouseEnter={() => videoRef.current?.play()}
       onMouseLeave={() => { if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
     >
       <video ref={videoRef} src={item.video} muted loop playsInline preload="metadata" className="scan-brighten w-full h-full object-cover transition-all duration-700 group-hover:scale-105" />
       <div className="scan-bar absolute top-0 bottom-0 w-[30%] pointer-events-none z-[2]" style={{ left: "-30%", opacity: 0, background: "linear-gradient(90deg, transparent, hsl(36 100% 50% / 0.25), hsl(36 100% 50% / 0.4), hsl(36 100% 50% / 0.25), transparent)" }} />
-      {/* Play icon */}
       <div className="absolute inset-0 flex items-center justify-center z-[3] pointer-events-none">
-        <div className="w-14 h-14 rounded-full bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-lg shadow-primary/30">
-          <Play className="w-6 h-6 text-primary-foreground ml-1" />
+        <div className="w-12 h-12 rounded-full bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-lg shadow-primary/30">
+          <Play className="w-5 h-5 text-primary-foreground ml-0.5" />
         </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-      <div className="absolute inset-0 p-5 flex flex-col justify-end z-[3]">
-        <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1">{item.category}</span>
-        <h3 className="text-foreground font-bold text-base leading-tight">{item.title}</h3>
+      <div className="absolute inset-0 p-4 flex flex-col justify-end z-[3]">
+        <h3 className="text-foreground font-bold text-sm leading-tight">{item.title}</h3>
       </div>
       <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/40 rounded-xl transition-all duration-500" />
     </div>
@@ -240,8 +314,7 @@ const VideoLightbox = ({ item, onClose }: { item: PortfolioItem; onClose: () => 
       <video src={item.video} controls autoPlay className="w-full h-full object-contain" />
     </div>
     <div className="mt-4 text-center">
-      <span className="text-primary text-xs font-semibold uppercase tracking-wider">{item.category}</span>
-      <h3 className="text-lg font-bold text-foreground mt-1">{item.title}</h3>
+      <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
       <p className="text-muted-foreground text-sm mt-2">{item.description}</p>
     </div>
   </div>
