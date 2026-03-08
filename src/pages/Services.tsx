@@ -122,12 +122,6 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  <Button variant="hero" size="lg" asChild>
-                    <Link to="/contact">
-                      Get a Quote
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </Button>
                 </div>
 
                 {/* Features Card */}
