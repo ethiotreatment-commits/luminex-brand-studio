@@ -52,12 +52,25 @@ const ScrollReactiveWave = () => {
       <div
         ref={containerRef}
         className="absolute bottom-0 left-0 h-full flex"
-        style={{ width: "300%", willChange: "transform" }}
+        style={{ width: "400%", willChange: "transform" }}
       >
-        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
-        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
-        <img src={waveBg} alt="" className="h-full w-1/3 object-cover flex-shrink-0" />
+        {[0, 1, 2, 3].map((i) => (
+          <img
+            key={i}
+            src={waveBg}
+            alt=""
+            className="h-full object-cover flex-shrink-0"
+            style={{ width: "25%", transform: i % 2 === 1 ? "scaleX(-1)" : undefined }}
+          />
+        ))}
       </div>
+      {/* Edge blend overlays to hide any remaining seams */}
+      <div
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(90deg, hsl(var(--background)) 0%, transparent 8%, transparent 92%, hsl(var(--background)) 100%)",
+        }}
+      />
       {/* Sparkling highlights */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (
