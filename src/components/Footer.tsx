@@ -60,13 +60,17 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-primary" />
                 info@luminex.et
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
+              <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-primary" />
-                +251 911 123 456
+                <a href="tel:+251912012669" className="text-muted-foreground hover:text-primary transition-colors">+251 912 012 669</a>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Phone className="w-4 h-4 text-primary" />
+                <a href="tel:+251912024124" className="text-muted-foreground hover:text-primary transition-colors">+251 912 024 124</a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                Addis Ababa, Ethiopia<br />Global Projects Welcome
+                Near Stairs Building, Addis Ababa, Ethiopia<br />Global Projects Welcome
               </li>
             </ul>
 
