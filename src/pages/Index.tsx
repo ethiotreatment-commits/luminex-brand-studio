@@ -74,7 +74,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
             className="mt-10 text-xl md:text-2xl text-foreground max-w-3xl mx-auto font-medium"
           >
-            We're Luminex - real people in Addis creating work you're proud to show the world.
+            Creative excellence that lights up your brand story.
           </motion.p>
 
           <motion.div
