@@ -73,24 +73,12 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <a href="tel:+251911123456" className="text-muted-foreground hover:text-primary transition-colors">
-                      +251 911 123 456
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
                     <p className="text-muted-foreground">
-                      Addis Ababa, Ethiopia<br />
+                      Near Stairs Building, Addis Ababa, Ethiopia<br />
                       <span className="text-primary">Global Projects Welcome</span>
                     </p>
                   </div>
@@ -119,17 +107,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-border h-64 bg-card relative">
+              {/* Google Maps */}
+              <div className="rounded-2xl overflow-hidden border border-border h-72 bg-card relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126115.06282565089!2d38.6965927!3d8.9806034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.4!2d38.7401747!3d8.9909553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Luminex Location"
+                  title="Luminex Location — Near Stairs Building, Addis Ababa"
                 />
                 <div className="absolute inset-0 pointer-events-none border border-primary/20 rounded-2xl" />
               </div>
