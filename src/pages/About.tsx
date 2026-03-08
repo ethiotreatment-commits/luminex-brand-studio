@@ -189,7 +189,7 @@ const About = () => {
                     <Target className="w-7 h-7 text-primary" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-                  <p className="text-muted-foreground leading-relaxed">We exist to empower brands with exceptional creative solutions that build lasting recognition, drive meaningful engagement, and deliver measurable growth. Through strategic design, compelling storytelling, and disciplined execution, we create work of enduring quality that our clients are proud to represent — and that resonates deeply with their audiences.</p>
+                  <p className="text-muted-foreground leading-relaxed">We exist to empower brands with exceptional creative solutions that build lasting recognition, drive meaningful engagement, and deliver measurable growth. Through strategic design, compelling storytelling, and disciplined execution, we create work of enduring quality that our clients are proud to represent, work that resonates deeply with their audiences.</p>
                 </div>
               </motion.div>
             </ScrollReveal>
