@@ -33,20 +33,20 @@ const ScrollTextReveal = ({ text, className = "", highlightPhrases = [] }: Scrol
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
 
-  // Shorter scroll distance for faster reveal
-  const scrollHeight = Math.max(200, words.length * 6);
+  // Taller scroll distance so the entire text has room to fully reveal
+  const scrollHeight = Math.max(250, words.length * 8);
 
   return (
     <div ref={containerRef} className="relative" style={{ height: `${scrollHeight}vh` }}>
       <div className="sticky top-0 min-h-screen flex items-center justify-center">
         <p className={`max-w-5xl mx-auto text-center leading-snug flex flex-wrap justify-center gap-x-[0.3em] gap-y-2 px-6 ${className}`}>
           {words.map((word, i) => {
-            // Map each word to a narrow band within 0–0.85 so last word fully resolves by 85% scroll
-            const start = (i / words.length) * 0.85;
-            const end = ((i + 1) / words.length) * 0.85;
+            // Map each word so the LAST word fully resolves by 95% scroll
+            const start = (i / words.length) * 0.9;
+            const end = ((i + 1) / words.length) * 0.9;
             const isHighlighted = highlightMap.has(i);
             return (
               <Word
