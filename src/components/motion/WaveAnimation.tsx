@@ -34,7 +34,7 @@ const WaveAnimation = () => {
             </feMerge>
           </filter>
         </defs>
-        {/* Wave 1 — large, slow, primary */}
+        {/* Wave 1 - large, slow, primary */}
         <path fill="url(#waveGrad1)" filter="url(#waveGlow)">
           <animate
             attributeName="d"
@@ -47,7 +47,7 @@ const WaveAnimation = () => {
             "
           />
         </path>
-        {/* Wave 2 — mid layer */}
+        {/* Wave 2 - mid layer */}
         <path fill="url(#waveGrad2)">
           <animate
             attributeName="d"
@@ -60,7 +60,7 @@ const WaveAnimation = () => {
             "
           />
         </path>
-        {/* Wave 3 — cyan accent, subtle */}
+        {/* Wave 3 - cyan accent, subtle */}
         <path fill="url(#waveGrad3)">
           <animate
             attributeName="d"

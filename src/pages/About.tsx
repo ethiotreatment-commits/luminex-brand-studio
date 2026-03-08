@@ -104,7 +104,7 @@ const About = () => {
 
               <ScrollReveal delay={0.15}>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  We integrate advanced AI tools and intelligent automation into our workflow — enhancing research, accelerating production, optimizing campaigns, and extracting actionable insights from data. Our AI proficiency allows us to move faster, test smarter, personalize content at scale, and continuously refine performance for measurable impact.
+                  We integrate advanced AI tools and intelligent automation into our workflow, enhancing research, accelerating production, optimizing campaigns, and extracting actionable insights from data. Our AI proficiency allows us to move faster, test smarter, personalize content at scale, and continuously refine performance for measurable impact.
                 </p>
               </ScrollReveal>
 
@@ -189,7 +189,7 @@ const About = () => {
                     <Target className="w-7 h-7 text-primary" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-                  <p className="text-muted-foreground leading-relaxed">We exist to empower brands with exceptional creative solutions that build lasting recognition, drive meaningful engagement, and deliver measurable growth. Through strategic design, compelling storytelling, and disciplined execution, we create work of enduring quality that our clients are proud to represent — and that resonates deeply with their audiences.</p>
+                  <p className="text-muted-foreground leading-relaxed">We exist to empower brands with exceptional creative solutions that build lasting recognition, drive meaningful engagement, and deliver measurable growth. Through strategic design, compelling storytelling, and disciplined execution, we create work of enduring quality that our clients are proud to represent, work that resonates deeply with their audiences.</p>
                 </div>
               </motion.div>
             </ScrollReveal>
@@ -212,7 +212,7 @@ const About = () => {
                     <Eye className="w-7 h-7 text-primary" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-                  <p className="text-muted-foreground leading-relaxed">To establish ourselves as the premier creative partner in Ethiopia and a trusted choice for ambitious brands worldwide — where innovative ideas, flawless execution, and proven results converge to help organizations achieve their full potential and stand out with confidence.</p>
+                  <p className="text-muted-foreground leading-relaxed">To establish ourselves as the premier creative partner in Ethiopia and a trusted choice for ambitious brands worldwide, where innovative ideas, flawless execution, and proven results converge to help organizations achieve their full potential and stand out with confidence.</p>
                 </div>
               </motion.div>
             </ScrollReveal>

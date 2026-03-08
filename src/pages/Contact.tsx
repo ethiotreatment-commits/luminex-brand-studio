@@ -117,7 +117,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Luminex Location — Near Stairs Building, Addis Ababa"
+                  title="Luminex Location - Near Stairs Building, Addis Ababa"
                 />
                 <div className="absolute inset-0 pointer-events-none border border-primary/20 rounded-2xl" />
               </div>

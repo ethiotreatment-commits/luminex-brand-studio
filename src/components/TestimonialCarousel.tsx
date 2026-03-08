@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
-    quote: "They transformed how we look online — incredible team. Professional, fast, and they actually listen.",
+    quote: "They transformed how we look online. Incredible team. Professional, fast, and they actually listen.",
     author: "Daniel A.",
     company: "Bekele Enterprises",
     role: "Founder",

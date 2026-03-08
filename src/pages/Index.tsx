@@ -74,7 +74,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
             className="mt-10 text-xl md:text-2xl text-foreground max-w-3xl mx-auto font-medium"
           >
-            We're Luminex — real people in Addis creating work you're proud to show the world.
+            We're Luminex - real people in Addis creating work you're proud to show the world.
           </motion.p>
 
           <motion.div
@@ -114,7 +114,7 @@ const Index = () => {
 
       {/* Scroll-scrubbed text reveal section */}
       <ScrollTextReveal
-        text="From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll — we bring your vision to life with strategy, precision, and creative excellence that drives real results."
+        text="From smart logos with hidden meaning, to campaigns that move the needle, to videos that stop the scroll - we bring your vision to life with strategy, precision, and creative excellence that drives real results."
         className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
         highlightPhrases={[
           "smart logos",
