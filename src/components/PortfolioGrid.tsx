@@ -64,9 +64,11 @@ const companyGroups: CompanyGroup[] = [
     sector: "Hotel & Hospitality",
     teaserCount: 2,
     videos: [
-      { id: 200, title: "Hotel Experience", category: "Video", type: "video", video: "/videos/ho_1.mp4", description: "Luxurious hotel walkthrough and brand experience." },
-      { id: 201, title: "Hospitality Showcase", category: "Video", type: "video", video: "/videos/8.mp4", description: "Highlights of world-class hospitality services." },
-      { id: 202, title: "Hotel Ambiance", category: "Video", type: "video", video: "/videos/6.mp4", description: "Capturing the elegant atmosphere and guest experience." },
+      { id: 200, title: "Hotel Experience 1", category: "Video", type: "video", video: "/videos/ho_1.mp4", description: "Luxurious hotel walkthrough and brand experience." },
+      { id: 201, title: "Hotel Experience 2", category: "Video", type: "video", video: "/videos/ho2.mp4", description: "Highlights of world-class hospitality services." },
+      { id: 202, title: "Hotel Experience 3", category: "Video", type: "video", video: "/videos/ho_3.mp4", description: "Capturing the elegant atmosphere and guest experience." },
+      { id: 203, title: "Hotel Experience 4", category: "Video", type: "video", video: "/videos/8.mp4", description: "Premium hotel ambiance and dining showcase." },
+      { id: 204, title: "Hotel Experience 5", category: "Video", type: "video", video: "/videos/6.mp4", description: "Behind the scenes of hospitality excellence." },
     ],
   },
   {
@@ -94,10 +96,14 @@ const companyGroups: CompanyGroup[] = [
     sector: "Travel Agencies",
     teaserCount: 2,
     videos: [
-      { id: 500, title: "Travel Promo 1", category: "Video", type: "video", video: "/videos/1.mp4", description: "Exciting travel agency promotional video." },
-      { id: 501, title: "Travel Promo 2", category: "Video", type: "video", video: "/videos/2.mp4", description: "Destination highlights and travel experiences." },
-      { id: 502, title: "Travel Promo 3", category: "Video", type: "video", video: "/videos/5.mp4", description: "Adventure and wanderlust brand campaign." },
-      { id: 503, title: "Travel Promo 4", category: "Video", type: "video", video: "/videos/7.mp4", description: "Travel stories and destination showcase." },
+      { id: 500, title: "Travel Promo 1", category: "Video", type: "video", video: "/videos/trav1.mp4", description: "Exciting travel agency promotional video." },
+      { id: 501, title: "Travel Promo 2", category: "Video", type: "video", video: "/videos/trav_2.mp4", description: "Destination highlights and travel experiences." },
+      { id: 502, title: "Travel Promo 3", category: "Video", type: "video", video: "/videos/trav_3.mp4", description: "Adventure and wanderlust brand campaign." },
+      { id: 503, title: "Travel Promo 4", category: "Video", type: "video", video: "/videos/trav_4.mp4", description: "Travel stories and destination showcase." },
+      { id: 504, title: "Travel Promo 5", category: "Video", type: "video", video: "/videos/1.mp4", description: "Vibrant travel destination highlights." },
+      { id: 505, title: "Travel Promo 6", category: "Video", type: "video", video: "/videos/2.mp4", description: "Wanderlust-inspiring travel campaign." },
+      { id: 506, title: "Travel Promo 7", category: "Video", type: "video", video: "/videos/5.mp4", description: "Scenic travel experiences and adventures." },
+      { id: 507, title: "Travel Promo 8", category: "Video", type: "video", video: "/videos/7.mp4", description: "Cultural travel exploration showcase." },
     ],
   },
 ];
