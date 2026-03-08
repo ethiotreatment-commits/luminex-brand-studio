@@ -96,10 +96,14 @@ const companyGroups: CompanyGroup[] = [
     sector: "Travel Agencies",
     teaserCount: 2,
     videos: [
-      { id: 500, title: "Travel Promo 1", category: "Video", type: "video", video: "/videos/1.mp4", description: "Exciting travel agency promotional video." },
-      { id: 501, title: "Travel Promo 2", category: "Video", type: "video", video: "/videos/2.mp4", description: "Destination highlights and travel experiences." },
-      { id: 502, title: "Travel Promo 3", category: "Video", type: "video", video: "/videos/5.mp4", description: "Adventure and wanderlust brand campaign." },
-      { id: 503, title: "Travel Promo 4", category: "Video", type: "video", video: "/videos/7.mp4", description: "Travel stories and destination showcase." },
+      { id: 500, title: "Travel Promo 1", category: "Video", type: "video", video: "/videos/trav1.mp4", description: "Exciting travel agency promotional video." },
+      { id: 501, title: "Travel Promo 2", category: "Video", type: "video", video: "/videos/trav_2.mp4", description: "Destination highlights and travel experiences." },
+      { id: 502, title: "Travel Promo 3", category: "Video", type: "video", video: "/videos/trav_3.mp4", description: "Adventure and wanderlust brand campaign." },
+      { id: 503, title: "Travel Promo 4", category: "Video", type: "video", video: "/videos/trav_4.mp4", description: "Travel stories and destination showcase." },
+      { id: 504, title: "Travel Promo 5", category: "Video", type: "video", video: "/videos/1.mp4", description: "Vibrant travel destination highlights." },
+      { id: 505, title: "Travel Promo 6", category: "Video", type: "video", video: "/videos/2.mp4", description: "Wanderlust-inspiring travel campaign." },
+      { id: 506, title: "Travel Promo 7", category: "Video", type: "video", video: "/videos/5.mp4", description: "Scenic travel experiences and adventures." },
+      { id: 507, title: "Travel Promo 8", category: "Video", type: "video", video: "/videos/7.mp4", description: "Cultural travel exploration showcase." },
     ],
   },
 ];
