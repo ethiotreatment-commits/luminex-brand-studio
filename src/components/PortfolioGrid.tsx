@@ -250,7 +250,7 @@ const ImageCard = ({ item, index, onClick }: { item: PortfolioItem; index: numbe
   </div>
 );
 
-/* Video card — 9:16 portrait */
+/* Video card - 9:16 portrait */
 const VideoCard = ({ item, index, onClick }: { item: PortfolioItem; index: number; onClick: () => void }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   return (
