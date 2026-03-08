@@ -47,7 +47,7 @@ const WaveAnimation = () => {
             "
           />
         </path>
-        {/* Wave 2 — mid layer */}
+        {/* Wave 2 - mid layer */}
         <path fill="url(#waveGrad2)">
           <animate
             attributeName="d"
