@@ -104,7 +104,7 @@ const About = () => {
 
               <ScrollReveal delay={0.15}>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  We integrate advanced AI tools and intelligent automation into our workflow — enhancing research, accelerating production, optimizing campaigns, and extracting actionable insights from data. Our AI proficiency allows us to move faster, test smarter, personalize content at scale, and continuously refine performance for measurable impact.
+                  We integrate advanced AI tools and intelligent automation into our workflow, enhancing research, accelerating production, optimizing campaigns, and extracting actionable insights from data. Our AI proficiency allows us to move faster, test smarter, personalize content at scale, and continuously refine performance for measurable impact.
                 </p>
               </ScrollReveal>
 
