@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Logo showTagline size="sm" />
             <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
-              Real people in Addis creating work you're proud to show the world.
+              Creative excellence that lights up your brand story.
             </p>
           </div>
 
