@@ -60,7 +60,7 @@ const WaveAnimation = () => {
             "
           />
         </path>
-        {/* Wave 3 — cyan accent, subtle */}
+        {/* Wave 3 - cyan accent, subtle */}
         <path fill="url(#waveGrad3)">
           <animate
             attributeName="d"
