@@ -67,8 +67,6 @@ const companyGroups: CompanyGroup[] = [
       { id: 200, title: "Hotel Experience 1", category: "Video", type: "video", video: "/videos/ho_1.mp4", description: "Luxurious hotel walkthrough and brand experience." },
       { id: 201, title: "Hotel Experience 2", category: "Video", type: "video", video: "/videos/ho2.mp4", description: "Highlights of world-class hospitality services." },
       { id: 202, title: "Hotel Experience 3", category: "Video", type: "video", video: "/videos/ho_3.mp4", description: "Capturing the elegant atmosphere and guest experience." },
-      { id: 203, title: "Hotel Experience 4", category: "Video", type: "video", video: "/videos/8.mp4", description: "Premium hotel ambiance and dining showcase." },
-      { id: 204, title: "Hotel Experience 5", category: "Video", type: "video", video: "/videos/6.mp4", description: "Behind the scenes of hospitality excellence." },
     ],
   },
   {
