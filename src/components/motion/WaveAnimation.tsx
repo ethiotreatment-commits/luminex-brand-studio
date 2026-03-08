@@ -34,7 +34,7 @@ const WaveAnimation = () => {
             </feMerge>
           </filter>
         </defs>
-        {/* Wave 1 — large, slow, primary */}
+        {/* Wave 1 - large, slow, primary */}
         <path fill="url(#waveGrad1)" filter="url(#waveGlow)">
           <animate
             attributeName="d"
