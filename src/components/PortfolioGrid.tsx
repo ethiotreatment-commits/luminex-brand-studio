@@ -56,7 +56,7 @@ const companyGroups: CompanyGroup[] = [
     videos: [
       { id: 100, title: "Health Campaign 1", category: "Video", type: "video", video: "/videos/helt_1.mp4", description: "Promotional video for a leading health institution." },
       { id: 101, title: "Health Campaign 2", category: "Video", type: "video", video: "/videos/hett_2.mp4", description: "Dynamic health awareness campaign spot." },
-      { id: 102, title: "Health Campaign 3", category: "Video", type: "video", video: "/videos/helt_3.mp4", description: "Comprehensive healthcare services showcase." },
+      { id: 102, title: "Health Campaign 3", category: "Video", type: "video", video: "/videos/cons2.mp4", description: "Corporate culture and expertise showcase." },
     ],
   },
   {
