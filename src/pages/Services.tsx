@@ -10,7 +10,7 @@ const services = [
   {
     icon: PenTool,
     title: "Graphic Design & Branding",
-    description: "We craft distinctive visual identities that authentically capture your brand's essence and leave a lasting impression. Our specialty lies in intelligent logo design incorporating layered symbolism — elements that invite discovery and foster memorability. From comprehensive brand systems to supporting collateral, we ensure every detail aligns with your strategic goals.",
+    description: "We craft distinctive visual identities that authentically capture your brand's essence and leave a lasting impression. Our specialty lies in intelligent logo design incorporating layered symbolism, elements that invite discovery and foster memorability. From comprehensive brand systems to supporting collateral, we ensure every detail aligns with your strategic goals.",
     features: [
       "Logo design with embedded symbolism and meaning",
       "Comprehensive brand guidelines and identity systems",
