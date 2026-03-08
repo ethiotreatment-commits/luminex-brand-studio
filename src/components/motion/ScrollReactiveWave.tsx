@@ -26,7 +26,7 @@ const ScrollReactiveWave = () => {
       offset.current -= speed.current;
 
       if (containerRef.current) {
-        const singleWidth = containerRef.current.scrollWidth / 3;
+        const singleWidth = containerRef.current.scrollWidth / 4;
         // Seamless wrap: keep offset within one tile width
         if (offset.current <= -singleWidth) {
           offset.current += singleWidth;
