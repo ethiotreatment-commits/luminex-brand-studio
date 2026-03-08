@@ -102,6 +102,8 @@ const companyGroups: CompanyGroup[] = [
       { id: 505, title: "Travel Promo 6", category: "Video", type: "video", video: "/videos/2.mp4", description: "Wanderlust-inspiring travel campaign." },
       { id: 506, title: "Travel Promo 7", category: "Video", type: "video", video: "/videos/5.mp4", description: "Scenic travel experiences and adventures." },
       { id: 507, title: "Travel Promo 8", category: "Video", type: "video", video: "/videos/7.mp4", description: "Cultural travel exploration showcase." },
+      { id: 508, title: "Travel Promo 9", category: "Video", type: "video", video: "/videos/8.mp4", description: "Premium travel ambiance and destination showcase." },
+      { id: 509, title: "Travel Promo 10", category: "Video", type: "video", video: "/videos/6.mp4", description: "Behind the scenes of travel excellence." },
     ],
   },
 ];
