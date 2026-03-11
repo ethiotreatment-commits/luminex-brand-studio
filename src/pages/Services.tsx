@@ -129,9 +129,9 @@ const Services = () => {
                   index % 2 === 1 && "lg:order-2"
                 )}>
                   <div className="flex items-center gap-1">
-                    <div className="w-12 h-px bg-gradient-to-r from-primary/40 to-primary/80" />
+                    <div className="w-12 h-px bg-gradient-to-r from-primary/40 to-primary/80 animate-[pulse_2s_ease-in-out_infinite]" />
                     <ArrowRight className={cn(
-                      "w-5 h-5 text-primary",
+                      "w-5 h-5 text-primary animate-[bounceX_1.5s_ease-in-out_infinite]",
                       index % 2 === 1 && "rotate-180"
                     )} />
                   </div>
