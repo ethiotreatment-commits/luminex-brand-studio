@@ -27,7 +27,7 @@ const Logo = ({ size = "md", showTagline = false, className, animated = true }: 
       <div className="relative">
         {/* Glow effect behind logo */}
         <div 
-          className="absolute inset-[-20%] blur-2xl opacity-[0.12] bg-[radial-gradient(circle,rgba(255,153,0,0.25)_0%,transparent_70%)]"
+          className="absolute inset-[-30%] blur-3xl opacity-[0.25] bg-[radial-gradient(circle,rgba(255,153,0,0.4)_0%,rgba(255,153,0,0.15)_40%,transparent_70%)]"
         />
         
         {/* Main logo image */}

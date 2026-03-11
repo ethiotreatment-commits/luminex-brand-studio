@@ -102,13 +102,12 @@ const Services = () => {
               <div
                 key={service.title}
                 className={cn(
-                  "grid lg:grid-cols-2 gap-12 items-start opacity-0 animate-fade-in",
-                  index % 2 === 1 && "lg:flex-row-reverse"
+                  "grid lg:grid-cols-[1fr_auto_1fr] gap-0 items-center opacity-0 animate-fade-in",
                 )}
                 style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
               >
                 {/* Content */}
-                <div className={cn(index % 2 === 1 && "lg:order-2")}>
+                <div className={cn(index % 2 === 1 && "lg:order-3")}>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-7 h-7 text-primary" />
@@ -122,6 +121,31 @@ const Services = () => {
                     {service.description}
                   </p>
 
+                </div>
+
+                {/* Arrow connector */}
+                <div className={cn(
+                  "hidden lg:flex items-center justify-center px-6",
+                  index % 2 === 1 && "lg:order-2"
+                )}>
+                  <div className="flex items-center gap-1">
+                    <div className="w-12 h-px bg-gradient-to-r from-primary/40 to-primary/80" />
+                    <ArrowRight className={cn(
+                      "w-5 h-5 text-primary",
+                      index % 2 === 1 && "rotate-180"
+                    )} />
+                  </div>
+                </div>
+
+                {/* Mobile arrow */}
+                <div className={cn(
+                  "flex lg:hidden items-center justify-center py-4",
+                  index % 2 === 1 && "lg:order-2"
+                )}>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="h-8 w-px bg-gradient-to-b from-primary/40 to-primary/80" />
+                    <ArrowRight className="w-5 h-5 text-primary rotate-90" />
+                  </div>
                 </div>
 
                 {/* Features Card */}
