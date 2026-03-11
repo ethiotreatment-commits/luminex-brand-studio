@@ -87,8 +87,8 @@ const Contact = () => {
                 <h3 className="font-medium text-foreground mb-4">Follow Us</h3>
                 <div className="flex items-center gap-3">
                   {[
-                    { icon: Instagram, href: "#", label: "Instagram" },
-                    { icon: Linkedin, href: "#", label: "LinkedIn" },
+                    { icon: Instagram, href: "https://instagram.com/the_luminex_", label: "Instagram" },
+                    { icon: Linkedin, href: "https://luminexagency.lovable.app/", label: "LinkedIn" },
                   ].map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -113,7 +113,7 @@ const Contact = () => {
                   </a>
                   {/* X (Twitter) */}
                   <a
-                    href="#"
+                    href="https://x.com/The_Luminex"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:glow-border transition-all duration-300"
@@ -123,7 +123,7 @@ const Contact = () => {
                   </a>
                   {/* TikTok */}
                   <a
-                    href="#"
+                    href="https://tiktok.com/@the_luminex_"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:glow-border transition-all duration-300"
