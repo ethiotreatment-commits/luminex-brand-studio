@@ -87,8 +87,8 @@ const Contact = () => {
                 <h3 className="font-medium text-foreground mb-4">Follow Us</h3>
                 <div className="flex items-center gap-3">
                   {[
-                    { icon: Instagram, href: "https://instagram.com/the_luminex_", label: "Instagram" },
-                    { icon: Linkedin, href: "https://luminexagency.lovable.app/", label: "LinkedIn" },
+                    { icon: Instagram, href: "https://www.instagram.com/the_luminex_/?hl=en#", label: "Instagram" },
+                    { icon: Linkedin, href: "https://www.linkedin.com/company/theluminex", label: "LinkedIn" },
                   ].map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}

@@ -73,8 +73,8 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4 mt-6">
               {[
-                { icon: Instagram, href: "https://instagram.com/the_luminex_", label: "Instagram" },
-                { icon: Linkedin, href: "https://luminexagency.lovable.app/", label: "LinkedIn" },
+                { icon: Instagram, href: "https://www.instagram.com/the_luminex_/?hl=en#", label: "Instagram" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/theluminex", label: "LinkedIn" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
