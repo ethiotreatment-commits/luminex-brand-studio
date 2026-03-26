@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import PortfolioGrid from "@/components/PortfolioGrid";
+import FeaturedWorks from "@/components/FeaturedWorks";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import ScrollTextReveal from "@/components/motion/ScrollTextReveal";
 import FloatingParticles from "@/components/motion/FloatingParticles";
@@ -167,19 +167,9 @@ const Index = () => {
       </section>
       </SectionSweepLine>
 
-      {/* Featured Work Section */}
+      {/* Featured Works + All Projects */}
       <SectionSweepLine>
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-        <div className="container mx-auto px-6 relative">
-          <ScrollReveal>
-            <SectionHeading subtitle="Our Work" title="Featured Projects" description="A glimpse into the work we're proud of." />
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <PortfolioGrid limit={4} showFilters={false} showViewMore={true} />
-          </ScrollReveal>
-        </div>
-      </section>
+        <FeaturedWorks />
       </SectionSweepLine>
 
       {/* Testimonials Section */}
