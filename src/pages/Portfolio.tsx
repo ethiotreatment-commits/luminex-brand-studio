@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PortfolioGrid from "@/components/PortfolioGrid";
+import FeaturedWorks from "@/components/FeaturedWorks";
 
 const Portfolio = () => {
   return (
@@ -30,12 +30,8 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Grid */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <PortfolioGrid showFilters={true} />
-        </div>
-      </section>
+      {/* Featured Works + All Projects */}
+      <FeaturedWorks />
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
