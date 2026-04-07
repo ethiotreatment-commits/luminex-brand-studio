@@ -4,22 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 // Featured images
-import img1 from "@/assets/portfolio/new-1.jpg";
-import img2 from "@/assets/portfolio/new-2.jpg";
-import img3 from "@/assets/portfolio/new-3.jpg";
-import img4 from "@/assets/portfolio/new-4.jpg";
-import img5 from "@/assets/portfolio/new-5.jpg";
-import img6 from "@/assets/portfolio/new-6.jpg";
+import img1 from "@/assets/portfolio/project-1.jpg";
+import img2 from "@/assets/portfolio/project-2.jpg";
+import img3 from "@/assets/portfolio/project-3.jpg";
+import img4 from "@/assets/portfolio/project-4.jpg";
+import img5 from "@/assets/portfolio/project-5.jpg";
+import img6 from "@/assets/portfolio/project-6.jpg";
 
 // All projects images
-import img7 from "@/assets/portfolio/new-7.jpg";
-import img8 from "@/assets/portfolio/new-8.jpg";
-import img9 from "@/assets/portfolio/new-9.jpg";
-import img10 from "@/assets/portfolio/new-10.jpg";
-import img11 from "@/assets/portfolio/new-11.jpg";
-import img12 from "@/assets/portfolio/new-12.jpg";
-import imgOld1 from "@/assets/portfolio/project-1.jpg";
-import imgOld2 from "@/assets/portfolio/project-2.jpg";
+import img7 from "@/assets/portfolio/project-7.jpg";
+import img8 from "@/assets/portfolio/project-8.jpg";
+import img9 from "@/assets/portfolio/project-9.jpg";
+import img10 from "@/assets/portfolio/project-10.jpg";
 
 type Project = {
   id: number;
