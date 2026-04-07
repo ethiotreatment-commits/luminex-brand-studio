@@ -13,6 +13,7 @@ import project6 from "@/assets/portfolio/project-6.jpg";
 import project7 from "@/assets/portfolio/project-7.jpg";
 import project8 from "@/assets/portfolio/project-8.jpg";
 import project9 from "@/assets/portfolio/project-9.jpg";
+import project10 from "@/assets/portfolio/project-10.jpg";
 
 const categories = ["All", "Graphics", "Video"];
 
@@ -29,15 +30,16 @@ type PortfolioItem = {
 };
 
 const imageItems: PortfolioItem[] = [
-  { id: 1, title: "Book Promotional Design", category: "Graphics", type: "image", image: project1, description: "Eye-catching promotional graphic for a book launch with bold typography and creative visual elements." },
-  { id: 2, title: "Educational Campaign Design", category: "Graphics", type: "image", image: project2, description: "Informative and visually engaging graphic design for an educational awareness campaign." },
-  { id: 3, title: "JL Furniture Brand Campaign", category: "Branding", type: "image", image: project3, description: "Creative brand campaign featuring dreamlike cloud imagery for a furniture company." },
-  { id: 4, title: "Furniture Brand Concept Art", category: "Branding", type: "image", image: project4, description: "Surreal space-themed concept art for JL Furniture showcasing creative brand storytelling." },
-  { id: 5, title: "Suhan Travel Campaign", category: "Digital Marketing", type: "image", image: project5, description: "Vibrant travel agency promotional design featuring world landmarks and call-to-action." },
-  { id: 6, title: "UNV Ethiopia Motivational", category: "Digital Marketing", type: "image", image: project6, description: "Powerful motivational design for UNV Ethiopia featuring bold typography and dynamic imagery." },
-  { id: 7, title: "Security Camera Promo", category: "Digital Marketing", type: "image", image: project7, description: "Creative promotional design for security camera products with compelling visuals." },
-  { id: 8, title: "Amibara Properties Campaign", category: "Branding", type: "image", image: project8, description: "Modern real estate promotional design for Amibara Properties featuring architectural visualization." },
-  { id: 9, title: "HASED Real Estate Holiday", category: "Graphics", type: "image", image: project9, description: "Holiday greeting design for HASED Real Estate with powerful imagery and brand messaging." },
+  { id: 1, title: "Zota Furniture Campaign", category: "Graphics", type: "image", image: project1, description: "Creative kitchen branding with miniature concept for Zota Furniture." },
+  { id: 2, title: "Holland Yoghurt Branding", category: "Graphics", type: "image", image: project2, description: "Natural dairy product visual identity with pastoral imagery." },
+  { id: 3, title: "Leyu Tour Travel Campaign", category: "Graphics", type: "image", image: project3, description: "Ethiopian tourism suitcase concept art for Leyu Tour." },
+  { id: 4, title: "Coffee Brand Identity", category: "Graphics", type: "image", image: project4, description: "Bold artisan coffee packaging with military helmet concept." },
+  { id: 5, title: "JL Furniture Heritage Design", category: "Graphics", type: "image", image: project5, description: "Ethiopian-inspired furniture brand visual with cultural motifs." },
+  { id: 6, title: "UNV Security Campaign", category: "Graphics", type: "image", image: project6, description: "Night vision security product promo with dramatic moonlit visuals." },
+  { id: 7, title: "Leyu Tour Flight Campaign", category: "Graphics", type: "image", image: project7, description: "Aviation-themed travel visual with Ethiopian waterfalls." },
+  { id: 8, title: "JL Furniture Space Concept", category: "Graphics", type: "image", image: project8, description: "Astronaut-themed furniture art on the lunar surface." },
+  { id: 9, title: "HudHud Express Delivery", category: "Graphics", type: "image", image: project9, description: "Vibrant logistics brand campaign with bold orange branding." },
+  { id: 10, title: "Beton Group VR Campaign", category: "Graphics", type: "image", image: project10, description: "Construction expo promotional design with VR technology." },
 ];
 
 // Video items grouped by company/sector
