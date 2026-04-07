@@ -14,7 +14,7 @@ import project7 from "@/assets/portfolio/project-7.jpg";
 import project8 from "@/assets/portfolio/project-8.jpg";
 import project9 from "@/assets/portfolio/project-9.jpg";
 
-const categories = ["All", "Graphics", "Branding", "Digital Marketing", "Video"];
+const categories = ["All", "Graphics", "Video"];
 
 type PortfolioItem = {
   id: number;
