@@ -41,8 +41,78 @@ const allProjects: Project[] = [
   { id: 104, title: "Beton Group VR Campaign", shortDesc: "Construction expo promotional design", fullDesc: "An innovative expo campaign for Beton Group featuring VR technology showcase, highlighting their architectural portfolio in a futuristic presentation.", image: img10 },
 ];
 
+type VideoItem = {
+  id: number;
+  title: string;
+  description: string;
+  video: string;
+};
+
+type CompanyGroup = {
+  company: string;
+  sector: string;
+  teaserCount: number;
+  videos: VideoItem[];
+};
+
+const companyGroups: CompanyGroup[] = [
+  {
+    company: "Health",
+    sector: "Health Sector",
+    teaserCount: 2,
+    videos: [
+      { id: 500, title: "Health Campaign 1", video: "/videos/helt_1.mp4", description: "Promotional video for a leading health institution." },
+      { id: 501, title: "Health Campaign 2", video: "/videos/hett_2.mp4", description: "Dynamic health awareness campaign spot." },
+      { id: 502, title: "Health Campaign 3", video: "/videos/cons2.mp4", description: "Corporate culture and expertise showcase." },
+    ],
+  },
+  {
+    company: "Hotels",
+    sector: "Hotel & Hospitality",
+    teaserCount: 2,
+    videos: [
+      { id: 600, title: "Hotel Experience 1", video: "/videos/ho_1.mp4", description: "Luxurious hotel walkthrough and brand experience." },
+      { id: 601, title: "Hotel Experience 2", video: "/videos/ho2.mp4", description: "Highlights of world-class hospitality services." },
+      { id: 602, title: "Hotel Experience 3", video: "/videos/ho_3.mp4", description: "Capturing the elegant atmosphere and guest experience." },
+    ],
+  },
+  {
+    company: "Cafeterias",
+    sector: "Cafeteria & Food",
+    teaserCount: 2,
+    videos: [
+      { id: 700, title: "Café Vibes 1", video: "/videos/caf_1.mp4", description: "Warm and inviting cafeteria brand video." },
+      { id: 701, title: "Café Vibes 2", video: "/videos/caf_2.mp4", description: "Showcasing the food, drinks, and cozy atmosphere." },
+      { id: 702, title: "Café Vibes 3", video: "/videos/caf_3.mp4", description: "A taste of the cafeteria culture and community." },
+    ],
+  },
+  {
+    company: "Consultancy",
+    sector: "Consultancy Offices",
+    teaserCount: 2,
+    videos: [
+      { id: 800, title: "Consultancy Spotlight 1", video: "/videos/cons.mp4", description: "Professional consultancy firm brand overview." },
+      { id: 801, title: "Consultancy Spotlight 2", video: "/videos/helt_3.mp4", description: "Comprehensive consultancy services showcase." },
+      { id: 802, title: "Consultancy Spotlight 3", video: "/videos/cons3.mp4", description: "Client success stories and professional impact." },
+    ],
+  },
+  {
+    company: "Travel",
+    sector: "Travel Agencies",
+    teaserCount: 2,
+    videos: [
+      { id: 900, title: "Travel Promo 1", video: "/videos/trav1.mp4", description: "Exciting travel agency promotional video." },
+      { id: 901, title: "Travel Promo 2", video: "/videos/trav_2.mp4", description: "Destination highlights and travel experiences." },
+      { id: 902, title: "Travel Promo 3", video: "/videos/trav_3.mp4", description: "Adventure and wanderlust brand campaign." },
+      { id: 903, title: "Travel Promo 4", video: "/videos/trav_4.mp4", description: "Travel stories and destination showcase." },
+    ],
+  },
+];
+
 const FeaturedWorks = () => {
   const [selected, setSelected] = useState<Project | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
+  const [expandedCompanies, setExpandedCompanies] = useState<Set<string>>(new Set());
   const allRef = useRef<HTMLDivElement>(null);
 
   const scrollToAll = () => {
@@ -50,6 +120,15 @@ const FeaturedWorks = () => {
     setTimeout(() => {
       allRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 300);
+  };
+
+  const toggleCompany = (company: string) => {
+    setExpandedCompanies((prev) => {
+      const next = new Set(prev);
+      if (next.has(company)) next.delete(company);
+      else next.add(company);
+      return next;
+    });
   };
 
   return (
