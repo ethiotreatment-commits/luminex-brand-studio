@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { X, ArrowRight } from "lucide-react";
+import { X, ArrowRight, Play, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
