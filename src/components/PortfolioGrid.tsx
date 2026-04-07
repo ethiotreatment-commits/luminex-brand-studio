@@ -14,8 +14,17 @@ import project7 from "@/assets/portfolio/project-7.jpg";
 import project8 from "@/assets/portfolio/project-8.jpg";
 import project9 from "@/assets/portfolio/project-9.jpg";
 import project10 from "@/assets/portfolio/project-10.jpg";
+import branding1 from "@/assets/portfolio/branding-1.jpg";
+import branding2 from "@/assets/portfolio/branding-2.jpg";
+import branding3 from "@/assets/portfolio/branding-3.jpg";
+import branding4 from "@/assets/portfolio/branding-4.jpg";
+import branding5 from "@/assets/portfolio/branding-5.jpg";
+import branding6 from "@/assets/portfolio/branding-6.jpg";
+import branding7 from "@/assets/portfolio/branding-7.jpg";
+import branding8 from "@/assets/portfolio/branding-8.jpg";
+import branding9 from "@/assets/portfolio/branding-9.jpg";
 
-const categories = ["All", "Graphics", "Video"];
+const categories = ["All", "Graphics", "Branding", "Video"];
 
 type PortfolioItem = {
   id: number;
@@ -40,6 +49,15 @@ const imageItems: PortfolioItem[] = [
   { id: 8, title: "JL Furniture Space Concept", category: "Graphics", type: "image", image: project8, description: "Astronaut-themed furniture art on the lunar surface." },
   { id: 9, title: "HudHud Express Delivery", category: "Graphics", type: "image", image: project9, description: "Vibrant logistics brand campaign with bold orange branding." },
   { id: 10, title: "Beton Group VR Campaign", category: "Graphics", type: "image", image: project10, description: "Construction expo promotional design with VR technology." },
+  { id: 11, title: "HudHud Tote Bag – White", category: "Branding", type: "image", image: branding1, description: "Elegant white tote bag with diamond pattern for HudHud Corporation." },
+  { id: 12, title: "HudHud Desk Calendar", category: "Branding", type: "image", image: branding2, description: "2026 desk calendar mockup with bold orange branding for HudHud." },
+  { id: 13, title: "HudHud Key Holder – White", category: "Branding", type: "image", image: branding3, description: "Premium metal keychain with HudHud Corporation branding." },
+  { id: 14, title: "HudHud Mousepad – White", category: "Branding", type: "image", image: branding4, description: "Clean white mousepad with HudHud logo for corporate use." },
+  { id: 15, title: "HudHud Mug – White", category: "Branding", type: "image", image: branding5, description: "Classic white ceramic mug with HudHud Corporation identity." },
+  { id: 16, title: "HudHud Mug – Orange", category: "Branding", type: "image", image: branding6, description: "Bold orange mug with white HudHud branding." },
+  { id: 17, title: "HudHud Mousepad – Orange", category: "Branding", type: "image", image: branding7, description: "Vibrant orange mousepad with HudHud Corporation logo." },
+  { id: 18, title: "HudHud Key Holder – Orange", category: "Branding", type: "image", image: branding8, description: "Orange-themed keychain with HudHud Corporation identity." },
+  { id: 19, title: "HudHud Tote Bag – Orange", category: "Branding", type: "image", image: branding9, description: "Orange patterned tote bag with HudHud Corporation branding." },
 ];
 
 // Video items grouped by company/sector
