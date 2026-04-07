@@ -4,22 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 // Featured images
-import img1 from "@/assets/portfolio/new-1.jpg";
-import img2 from "@/assets/portfolio/new-2.jpg";
-import img3 from "@/assets/portfolio/new-3.jpg";
-import img4 from "@/assets/portfolio/new-4.jpg";
-import img5 from "@/assets/portfolio/new-5.jpg";
-import img6 from "@/assets/portfolio/new-6.jpg";
+import img1 from "@/assets/portfolio/project-1.jpg";
+import img2 from "@/assets/portfolio/project-2.jpg";
+import img3 from "@/assets/portfolio/project-3.jpg";
+import img4 from "@/assets/portfolio/project-4.jpg";
+import img5 from "@/assets/portfolio/project-5.jpg";
+import img6 from "@/assets/portfolio/project-6.jpg";
 
 // All projects images
-import img7 from "@/assets/portfolio/new-7.jpg";
-import img8 from "@/assets/portfolio/new-8.jpg";
-import img9 from "@/assets/portfolio/new-9.jpg";
-import img10 from "@/assets/portfolio/new-10.jpg";
-import img11 from "@/assets/portfolio/new-11.jpg";
-import img12 from "@/assets/portfolio/new-12.jpg";
-import imgOld1 from "@/assets/portfolio/project-1.jpg";
-import imgOld2 from "@/assets/portfolio/project-2.jpg";
+import img7 from "@/assets/portfolio/project-7.jpg";
+import img8 from "@/assets/portfolio/project-8.jpg";
+import img9 from "@/assets/portfolio/project-9.jpg";
+import img10 from "@/assets/portfolio/project-10.jpg";
 
 type Project = {
   id: number;
@@ -30,23 +26,19 @@ type Project = {
 };
 
 const featured: Project[] = [
-  { id: 1, title: "Luxury Packaging Design", shortDesc: "Premium brand identity with gold foil finishes", fullDesc: "A comprehensive luxury packaging project featuring embossed gold finishes on dark marble surfaces. The design conveys premium quality and exclusivity through sophisticated material choices and elegant typography.", image: img1 },
-  { id: 2, title: "Social Media Campaign", shortDesc: "Vibrant digital campaign with bold gradients", fullDesc: "A high-energy social media campaign featuring bold typography overlaid on colorful abstract gradients. Designed to capture attention across Instagram, Facebook, and TikTok with scroll-stopping visuals.", image: img2 },
-  { id: 3, title: "Artisan Coffee Branding", shortDesc: "Dark roast packaging with heritage aesthetics", fullDesc: "Complete brand identity for a premium artisan coffee brand, featuring rich dark tones with gold accents. The packaging design communicates tradition, quality, and the craft of Ethiopian coffee culture.", image: img3 },
-  { id: 4, title: "Award Ceremony Visual", shortDesc: "Golden stage design for prestigious event", fullDesc: "Dramatic visual identity for a major award ceremony, featuring golden spotlight effects and cinematic typography. The design captures the prestige and glamour of a red-carpet event.", image: img4 },
-  { id: 5, title: "Real Estate Campaign", shortDesc: "Modern architectural branding with sunset tones", fullDesc: "An elegant real estate marketing campaign featuring contemporary architecture bathed in golden sunset light. The minimalist approach highlights the premium quality of the property.", image: img5 },
-  { id: 6, title: "Beauty Brand Identity", shortDesc: "Rose gold cosmetics product visualization", fullDesc: "A luxurious beauty brand identity featuring rose gold product photography with soft, elegant lighting. The cohesive product line design communicates sophistication and modern femininity.", image: img6 },
+  { id: 1, title: "Zota Furniture Campaign", shortDesc: "Creative kitchen branding with miniature concept", fullDesc: "A stunning creative concept for Zota Furniture featuring a miniature kitchen on a plate, blending culinary and furniture aesthetics in a memorable visual metaphor.", image: img1 },
+  { id: 2, title: "Holland Yoghurt Branding", shortDesc: "Natural dairy product visual identity", fullDesc: "A fresh and organic product visualization for Holland Yoghurt, featuring pastoral imagery with grazing cows and lush greenery to communicate natural goodness.", image: img2 },
+  { id: 3, title: "Leyu Tour Travel Campaign", shortDesc: "Ethiopian tourism suitcase concept art", fullDesc: "An imaginative travel campaign for Leyu Tour featuring a suitcase filled with Ethiopian landscapes, wildlife, and adventure — inviting travelers to discover Ras Dashen.", image: img3 },
+  { id: 4, title: "Coffee Brand Identity", shortDesc: "Bold artisan coffee packaging design", fullDesc: "A powerful coffee brand campaign featuring a military helmet made of coffee beans, communicating strength and boldness of the Ethiopian coffee culture.", image: img4 },
+  { id: 5, title: "JL Furniture Heritage Design", shortDesc: "Ethiopian-inspired furniture brand visual", fullDesc: "A rich and cultural furniture brand campaign blending traditional Ethiopian art with modern interior design, featuring warm tones and cultural motifs.", image: img5 },
+  { id: 6, title: "UNV Security Campaign", shortDesc: "Night vision security product promo", fullDesc: "A dramatic product campaign for UNV Ethiopia security cameras, featuring moonlit nightscapes and bold typography emphasizing crystal-clear surveillance.", image: img6 },
 ];
 
 const allProjects: Project[] = [
-  { id: 101, title: "Restaurant Menu Design", shortDesc: "Elegant dining brand identity", fullDesc: "A premium restaurant menu design featuring sophisticated food photography on a dark background. The layout balances elegance with readability for an upscale dining experience.", image: img7 },
-  { id: 102, title: "Fashion Lookbook", shortDesc: "Editorial fashion photography layout", fullDesc: "A striking fashion lookbook cover with minimalist black and white editorial design. The silhouette-based approach creates a dramatic and memorable visual statement.", image: img8 },
-  { id: 103, title: "Wine Label Collection", shortDesc: "Premium vineyard branding series", fullDesc: "An artisan wine label collection featuring hand-illustrated mountain landscapes with gold foil accents. Each label tells the story of the vineyard's heritage.", image: img9 },
-  { id: 104, title: "Tech Startup Branding", shortDesc: "Clean corporate identity system", fullDesc: "A modern corporate identity system for a tech startup, featuring clean blue and white geometric patterns across stationery, business cards, and digital assets.", image: img10 },
-  { id: 105, title: "Juice Brand Packaging", shortDesc: "Vibrant tropical product design", fullDesc: "A colorful juice brand packaging design that captures the freshness of tropical fruits. The vibrant color palette and playful typography appeal to health-conscious consumers.", image: img11 },
-  { id: 106, title: "Hotel Brand Campaign", shortDesc: "Five-star hospitality visual", fullDesc: "A luxurious hotel brand campaign showcasing the grand lobby with crystal chandeliers and warm golden lighting. The photography conveys the five-star experience.", image: img12 },
-  { id: 107, title: "Book Launch Poster", shortDesc: "Eye-catching promotional graphic", fullDesc: "A bold book launch promotional design with creative typography and compelling visual elements designed to generate buzz and drive pre-orders.", image: imgOld1 },
-  { id: 108, title: "Education Campaign", shortDesc: "Informative awareness design", fullDesc: "An engaging educational awareness campaign design targeting youth audiences with informative and visually appealing graphics.", image: imgOld2 },
+  { id: 101, title: "Leyu Tour Flight Campaign", shortDesc: "Aviation-themed travel visual", fullDesc: "An ethereal travel campaign featuring an airplane window revealing Ethiopian waterfalls and lush landscapes, combining flight imagery with natural wonder.", image: img7 },
+  { id: 102, title: "JL Furniture Space Concept", shortDesc: "Astronaut-themed furniture art", fullDesc: "A surreal and creative furniture brand concept featuring an astronaut relaxing on a leather sofa on the moon, with Earth visible through a golden frame.", image: img8 },
+  { id: 103, title: "HudHud Express Delivery", shortDesc: "Vibrant logistics brand campaign", fullDesc: "A high-energy delivery service campaign for HudHud Express featuring bold orange branding, dynamic road imagery, and a compelling call-to-action.", image: img9 },
+  { id: 104, title: "Beton Group VR Campaign", shortDesc: "Construction expo promotional design", fullDesc: "An innovative expo campaign for Beton Group featuring VR technology showcase, highlighting their architectural portfolio in a futuristic presentation.", image: img10 },
 ];
 
 const FeaturedWorks = () => {
