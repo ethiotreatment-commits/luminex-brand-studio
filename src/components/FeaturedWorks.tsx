@@ -269,7 +269,82 @@ const FeaturedWorks = () => {
         </div>
       </section>
 
-      {/* ── Detail Modal ── */}
+      {/* ── Video Portfolio ── */}
+      <section className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+        <div className="container mx-auto px-6 relative">
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4"
+            >
+              Motion & Film
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            >
+              Video Portfolio
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-muted-foreground text-lg max-w-2xl mx-auto"
+            >
+              Cinematic storytelling that brings brands to life
+            </motion.p>
+          </div>
+
+          <div className="space-y-16">
+            {companyGroups.map((group) => {
+              const isExpanded = expandedCompanies.has(group.company);
+              const visibleVideos = isExpanded ? group.videos : group.videos.slice(0, group.teaserCount);
+              const hasMore = group.videos.length > group.teaserCount;
+
+              return (
+                <div key={group.company} className="space-y-6">
+                  <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="text-2xl font-bold text-foreground"
+                  >
+                    {group.sector}
+                  </motion.h3>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                    {visibleVideos.map((v, i) => (
+                      <VideoCard key={v.id} item={v} index={i} onClick={() => setSelectedVideo(v)} />
+                    ))}
+                  </div>
+
+                  {hasMore && (
+                    <button
+                      onClick={() => toggleCompany(group.company)}
+                      className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all duration-300"
+                    >
+                      {isExpanded ? (
+                        <>Show Less <ChevronUp className="w-4 h-4" /></>
+                      ) : (
+                        <>View More ({group.videos.length - group.teaserCount} more) <ChevronDown className="w-4 h-4" /></>
+                      )}
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Detail Modal (images) ── */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -313,7 +388,74 @@ const FeaturedWorks = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* ── Video Modal ── */}
+      <AnimatePresence>
+        {selectedVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/95 backdrop-blur-xl"
+            onClick={() => setSelectedVideo(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-sm mx-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedVideo(null)}
+                className="absolute -top-12 right-0 z-20 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:text-primary transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-border">
+                <video src={selectedVideo.video} controls autoPlay className="w-full h-full object-contain" />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-lg font-bold text-foreground">{selectedVideo.title}</h3>
+                <p className="text-muted-foreground text-sm mt-2">{selectedVideo.description}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
+  );
+};
+
+/* Video card component */
+const VideoCard = ({ item, index, onClick }: { item: { id: number; title: string; video: string }; index: number; onClick: () => void }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05, duration: 0.4 }}
+      whileHover={{ y: -4 }}
+      className="group relative aspect-[9/16] rounded-xl overflow-hidden cursor-pointer"
+      onClick={onClick}
+      onMouseEnter={() => videoRef.current?.play()}
+      onMouseLeave={() => { if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
+    >
+      <video ref={videoRef} src={item.video} muted loop playsInline preload="metadata" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute inset-0 flex items-center justify-center z-[3] pointer-events-none">
+        <div className="w-12 h-12 rounded-full bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-lg shadow-primary/30">
+          <Play className="w-5 h-5 text-primary-foreground ml-0.5" />
+        </div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-3 z-[3]">
+        <h3 className="text-white font-bold text-sm leading-tight drop-shadow-md">{item.title}</h3>
+      </div>
+      <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/30 rounded-xl transition-all duration-300 pointer-events-none" />
+    </motion.div>
   );
 };
 
